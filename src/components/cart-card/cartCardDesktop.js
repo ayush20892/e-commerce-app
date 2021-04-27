@@ -85,7 +85,7 @@ export function CartCardDesktop() {
           </div>
         
           <div className="saving-label" style={{backgroundColor: "rgba(29, 136, 2, 0.1)", color: "rgb(29, 136, 2)"}}>
-             <p>You are saving ₹ 600 on this order</p> 
+             <p>You are saving ₹ 400 on this order</p> 
           </div>
 
         </div>

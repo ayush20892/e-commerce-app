@@ -177,20 +177,22 @@
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 1rem;
     padding: 0.3rem 0rem;
   }
 
   .checkout-box > .checkout-btn > h4{
     margin: 0;
-    margin-top: 0.2rem;
     margin-left: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 
   .checkout-box > .checkout-btn > button{
-    padding: 0.6rem 0.4rem;
+    padding: 3% 0.4rem;
     margin: 0rem 0.2rem;
-    width: 75%;
+    width: 70%;
     font-weight: 700;
     background-color: #4169e1;
     border: 0.3px solid #4169e1;

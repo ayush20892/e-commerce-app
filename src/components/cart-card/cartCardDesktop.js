@@ -63,7 +63,37 @@ export function CartCardDesktop() {
       </div>
 
       <div className="checkout-box">
+        <div className="heading">
+          Price Summary
+        </div>
+        <div className="payment-box">
+          <div className="payment-box-inner">
+              <p>Total MRP (Incl. of taxes)</p>
+              <p><span style={{fontWeight: "bold"}}>₹</span> {stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 400)}</p>
+          </div>
+          <div className="payment-box-inner">
+              <p>Delivery Fee</p>
+              <p style={{color: "rgb(29, 136, 2)"}}>FREE</p>
+          </div>
+          <div className="payment-box-inner">
+              <p>Bag Discount</p>
+              <p>- <span style={{fontWeight: "bold"}}>₹</span> 400</p>
+          </div>
+          <div className="payment-box-inner" style={{fontWeight: "590"}}>
+              <p>Subtotal</p>
+              <p><span style={{fontWeight: "bold"}}>₹</span> {stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 0)}</p>
+          </div>
         
+          <div className="saving-label" style={{backgroundColor: "rgba(29, 136, 2, 0.1)", color: "rgb(29, 136, 2)"}}>
+             <p>You are saving ₹ 600 on this order</p> 
+          </div>
+
+        </div>
+
+        <div className="checkout-btn">
+            <h4>Rs {stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 0)}</h4>
+            <button>CHECKOUT</button>
+        </div>
       </div>
     </div>
   );

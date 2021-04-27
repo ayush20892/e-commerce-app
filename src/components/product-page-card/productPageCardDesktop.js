@@ -18,7 +18,7 @@ export function ProductPageCardDesktop({product})
   return(
     <>
       <div className="category-name">
-        {categoryName.toUpperCase()} / {productType}
+      Home &nbsp;&nbsp;/ {categoryName} &nbsp;&nbsp;/ {productType} &nbsp;&nbsp;/ {product.name}
       </div>
       <div className="product-page-desktop">
         <div>

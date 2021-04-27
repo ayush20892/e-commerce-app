@@ -2,9 +2,10 @@
 
 
   .category-name{
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     margin-left: 10%;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    color: gray;
   }
 
   .product-page-desktop{

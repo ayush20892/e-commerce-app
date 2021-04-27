@@ -1,0 +1,63 @@
+.product-card{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+}
+
+.product-card > .card-card{
+  position: relative;
+  width: 49%;
+  padding: 0.2rem 0.05rem;
+}
+
+.product-card > .card-card > div{
+  position: relative;
+  width: 100%;
+}
+
+.product-card > .card-card > div > span {
+  border: 0.3px solid white;
+  border-radius: 50%;
+  background-color: white;
+  padding: 0rem 0.2rem;
+  padding-top: 0.2rem;;
+  font-size: 1.1rem;;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.product-card > .card-card > div > a > img{
+  width: 100%;
+}
+
+.product-card > .card-card > .card-detail{
+  margin-left: 0.2rem;
+}
+
+.product-card > .card-card > .card-detail > a > h4{
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0rem 0rem;
+}
+
+.product-card > .card-card > .card-detail > a > h5{
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0.2rem 0rem;
+}
+
+
+.product-card > .card-card > .card-detail > button{
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  padding: 0.7rem 0rem;
+  background-color: white;
+  border: 0.5px solid black;
+  margin: 0rem 0rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+

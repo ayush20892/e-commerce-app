@@ -1,0 +1,21 @@
+.category-list{
+  margin: 5rem 0rem;
+}
+
+.category-list > .list-non-bullets {
+  list-style: none;
+  padding: 0rem 0.2rem;
+}
+
+.category-list > .list-non-bullets > .list-with-border {
+  border: 1px solid darkgray;
+}
+
+.category-list > .list-non-bullets > .list-item{
+  padding: 1rem 2rem;
+  margin: 0.2rem 0rem;
+  cursor: pointer;
+  width: 83%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

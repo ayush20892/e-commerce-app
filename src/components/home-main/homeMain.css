@@ -1,0 +1,191 @@
+main{
+  margin-top: 4rem;
+  margin-left: 0rem;
+  margin-bottom: 5rem;
+}
+
+main > .categories{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+main > .categories  >  .category{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+main > .categories  >  .category > h5{
+  text-align: center;
+  margin: 0rem 0rem;
+  margin-top: 0.5rem;
+}
+
+main > .categories  > .category > img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+
+main > .hoarding{
+  width: 100%;
+  margin: 1.5rem 0rem;
+  position: relative;
+}
+
+main > .hoarding > img{
+  width: 100%;
+}
+
+main > .hoarding > .hoardingText{
+  position: absolute;
+  top: 13rem;
+  right: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+main > .trending{
+  margin: 3rem 0.9rem;
+}
+
+main > .trending > h2{
+  text-align: center;
+  margin: 0rem 0rem;
+}
+
+main > .trending > .trendingProducts{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+main > .trending > .trendingProducts > .trendingCard{
+  width: 30%;
+  margin: 0.5rem 0rem;
+  cursor: pointer;
+}
+
+.trending > .trendingProducts > .trendingCard > img{
+  width: 100%;
+  border-radius: 5%;
+}
+
+.trending > .trendingProducts > .trendingCard > .trendingPrice{
+  text-align: center;
+}
+
+.trending > .trendingProducts > .trendingCard > .trendingPrice > strike{
+  margin-left: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+main > .trending > h4{
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+
+@media screen and (min-width: 500px) {
+  
+  main{
+    margin-bottom: 0rem;
+    margin-top: 4rem;
+  }
+
+
+
+  main > .categories{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+  }
+
+  main > .categories  >  .category{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main > .categories  >  .category > h5{
+    text-align: center;
+    margin: 0rem 0rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+
+
+
+
+  main > .hoarding{
+    width: 100%;
+    margin: 1.5rem 0rem;
+    position: relative;
+    display: flex;
+    gap: 12.5%;
+    align-items: center;
+  }
+  
+  main > .hoarding > img{
+    width: 60%;
+    margin: 0% 0%;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+  }
+
+  main > .hoarding > .hoardingText{
+    position: relative;
+    top: 0rem;
+    right: 0%;
+    text-align: center;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  main > .trending{
+    margin: 3rem 0.9rem;
+  }
+  
+  main > .trending > h2{
+    text-align: center;
+    margin: 0rem 0rem;
+  }
+  
+  main > .trending > .trendingProducts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    width: 100%;
+    margin: 1rem 4%;
+  }
+  
+  main > .trending > .trendingProducts > .trendingCard{
+    width: 16%;
+    margin: 0.5rem 0rem;
+    cursor: pointer;
+  }
+
+  .trending > .trendingProducts > .trendingCard > img{
+    width: 100%;
+    border-radius: 5%;
+  }
+
+}

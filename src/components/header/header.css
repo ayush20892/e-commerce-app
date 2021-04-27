@@ -1,0 +1,158 @@
+nav{
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+}
+
+nav > .ham-brand{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+nav > .ham-brand > h4{
+  margin: 0;
+  position: relative;
+}
+
+.ham-brand > .ham-icon{
+  font-size: 1.7rem;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  top: 0.05rem;
+  left: 0.3rem
+}
+
+nav > .ham-brand > .brand-icon > h4{
+  position: relative;
+  /* bottom: 0.7rem; */
+  margin: 0rem 0rem;
+  font-size: 1.2rem;
+}
+
+nav > .ham-brand > .brand-icon > img {
+  display: none;
+}
+
+nav > .ham-brand > .nav-pills{
+  display: none;
+}
+
+nav > .ham-brand > h5{
+  position: relative;
+  /* top: 0.35rem; */
+  margin: 0;
+}
+
+
+
+nav > .side-icon{
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  right: 1.5rem
+}
+
+nav > .side-icon > a{
+  position: relative;
+}
+
+nav > .side-icon > a > .user{
+  display: none;
+}
+
+nav > .side-icon > a > .icons{
+  font-size: 1.4rem;
+}
+
+nav > .side-icon > a > span{
+  font-size: 0.85;
+  position: absolute;
+  left: 0.8rem;
+  background-color: var(--primary-color);
+  padding: 0rem 0.2rem;
+  border: 0.2px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 500px) {
+
+
+  nav{
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0rem;
+    border-bottom: 0.1px solid grey
+    /* box-shadow: 0px 4px 20px #888888; */
+  }
+  
+  nav > .ham-brand{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin: 0rem 5%;
+  }
+
+  .ham-brand > .ham-icon {
+      display: none;
+  }
+
+  nav > .ham-brand > .brand-icon{
+    cursor: pointer;
+  }
+
+  nav > .ham-brand > .brand-icon > h4{
+    position: relative;
+    /* bottom: 0.7rem; */
+    margin: 0rem 0rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  nav > .ham-brand > .brand-icon > img{
+    display: inline;
+    width: 60%;
+  }
+
+  nav > .ham-brand > .nav-pills{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0rem 2rem;
+  }
+
+  nav  > .ham-brand > .nav-pills > h5{
+    margin: 0rem 0rem;
+    cursor: pointer;
+  }
+
+  nav > .side-icon > a > .user{
+    display: inline;
+  }
+
+  nav > .side-icon{
+    align-items: center;
+    margin: 0rem 5%;
+  }
+
+  nav > .side-icon > a > .icons{
+    font-size: 1.2rem;
+  }
+
+  nav > .side-icon > a > span{
+    font-size: 70%;
+  }
+
+}

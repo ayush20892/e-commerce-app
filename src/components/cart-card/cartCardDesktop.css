@@ -1,0 +1,121 @@
+@media screen and (min-width: 500px) {
+
+  .cart-box-desktop{
+    display: flex;
+    justify-content: center;
+    margin: 6rem 2%;
+  }
+
+
+  .cart-box-desktop > .card-vertical{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0rem 0rem;
+  }
+
+  .cart-box-desktop > .card-vertical > .bag-item{
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+
+  .card-ver-box{
+    border: 0.1px solid lightgray;
+    margin: 0.5% 1%;
+    width: 55%;
+    /* padding-bottom: 3%; */
+  }
+  
+  .card-vertical > .card-ver-box > .card-card-ver{
+    display: flex;
+    gap: 3%;
+    padding: 2% 0%;
+    border-bottom: 0.1px solid lightgray;
+  }
+  
+  .card-vertical > .card-ver-box > 
+  .card-card-ver > img{
+    max-width:  25%;
+    margin-left: 2%;
+  }
+  
+  .card-vertical > .card-ver-box >
+  .card-card-ver > .card-detail > h4{
+    margin: 0rem 0rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  
+  .card-vertical > .card-ver-box >
+  .card-card-ver > .card-detail > h5{
+    margin: 0rem 0rem;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .card-vertical > .card-ver-box >
+  .card-card-ver > .card-detail > h5 > strike{
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  
+  .card-card-ver > .card-detail > .qty{
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-card-ver > .card-detail > .qty > button{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .card-card-ver > .card-detail > .qty > button:focus{
+    border: none;
+    outline: none;
+  }
+  
+  .card-card-ver > .card-detail > .qty > h5{
+    margin: 0rem 0rem;
+  }
+  
+  .card-ver-box > hr{
+    margin-top: 0.3rem;
+    margin-bottom: 0rem;
+    padding: 0rem 0rem;
+    border: 0.1px solid lightgray;
+  }
+  
+  
+  .card-ver-box > .card-ver-btn {
+    /* padding: 1rem 0rem; */
+  }
+  
+  .card-ver-box > .card-ver-btn > .remove-btn{
+    width: 30%;
+    padding: 2% 0%;
+    background-color: white;
+    border: none;
+    border-right: 0.3px solid lightgray;
+    cursor: pointer;
+  }
+  
+  .card-ver-box > .card-ver-btn > .move-to-wish-btn{
+    width: 70%;
+    padding: 2% 0%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card-ver-box > .card-ver-btn > button:focus{
+    border: none;
+    outline: none;
+  }
+  
+
+
+}

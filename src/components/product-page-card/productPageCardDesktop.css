@@ -8,6 +8,10 @@
     color: gray;
   }
 
+  .category-name > span{
+    cursor: pointer;
+  }
+
   .product-page-desktop{
     margin-top: 1.5rem;
     display: flex;

@@ -7,7 +7,7 @@ import { GrEmoji } from "react-icons/gr";
 import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
 import { CheckItem } from "../../util.js"
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Link } from "react-router-dom"
 
 export function ProductPageCardDesktop({product})
@@ -15,10 +15,14 @@ export function ProductPageCardDesktop({product})
   const { categoryName,productType} = useParams()
   const { stateCart,dispatchCart } = useCart()
   const { stateWishList,dispatchWishList } = useWishList() 
+  const navigate = useNavigate()
   return(
     <>
       <div className="category-name">
-      Home &nbsp;&nbsp;/ {categoryName} &nbsp;&nbsp;/ {productType} &nbsp;&nbsp;/ {product.name}
+        <span onClick={() => navigate("/")}>Home</span> &nbsp;&nbsp;/&nbsp;
+        <span onClick={() => navigate(`/categories/${categoryName}`)}>{categoryName}</span> &nbsp;&nbsp;/&nbsp;
+        <span onClick={() => navigate(`/${categoryName}/${productType}`)}>{productType}</span> &nbsp;&nbsp;/&nbsp;
+         {product.name}
       </div>
       <div className="product-page-desktop">
         <div>

@@ -2,7 +2,7 @@ export const MenData = {
   men: {
     halfSleeveTshirt : [
       {
-        id: "men-half-sleeve-tshirt-1",
+        id: "men-halfSleeveTshirt-1",
         img: "https://images.bewakoof.com/t540/nimbus-grey-half-sleeve-t-shirt-men-s-plain-t-shirts-223291-1585903641.jpg",
         name: "Nimbus Grey Half Sleeve T-Shirt",
         price: 299,
@@ -13,7 +13,7 @@ export const MenData = {
         trending: true
       },
       {
-        id: "men-half-sleeve-tshirt-2",
+        id: "men-halfSleeveTshirt-2",
         img: "https://images.bewakoof.com/t540/stripe-mickey-dl-aop-t-shirt-men-s-plain-half-sleeves-aop-t-shirt-306883-1618466414.jpg",
         name: "Stripe Mickey (DL) AOP Half Sleeve T-Shirt",
         price: 349,
@@ -24,7 +24,7 @@ export const MenData = {
         trending: false
       },
       {
-        id: "men-half-sleeve-tshirt-3",
+        id: "men-halfSleeveTshirt-3",
         img: "https://images.bewakoof.com/t540/white--jet-black-90-s-vibe-panel-t-shirt-men-s-90-s-vibe-half-sleeves-plain-two-panel-t-shirt-264041-1581166018.jpg",
         name: "White & Jet Black 90's Vibe Panel T-Shirt",
         price: 299,
@@ -35,7 +35,7 @@ export const MenData = {
         trending: true
       },
       {
-        id: "men-half-sleeve-tshirt-4",
+        id: "men-halfSleeveTshirt-4",
         img: "https://images.bewakoof.com/t540/grey-camo-half-sleeve-camo-t-shirt-men-s-plain-half-sleeve-camo-t-shirt-277507-1605183058.jpg",
         name: "Grey Camo Half Sleeve Camo T-Shirt",
         price: 349,
@@ -46,7 +46,7 @@ export const MenData = {
         trending: true
       },
       {
-        id: "men-half-sleeve-tshirt-5",
+        id: "men-halfSleeveTshirt-5",
         img: "https://images.bewakoof.com/t540/batman-outline-logo-half-sleeve-t-shirt-bml-black-men-s-printed-t-shirts-283889-1603362127.jpg",
         name: "Batman Outline Logo Half Sleeve T-Shirt (BML) Black",
         price: 279,
@@ -57,7 +57,7 @@ export const MenData = {
         trending: true
       },
       {
-        id: "men-half-sleeve-tshirt-6",
+        id: "men-halfSleeveTshirt-6",
         img: "https://images.bewakoof.com/t540/white-crewneck-varsity-rib-half-sleeves-t-shirt-men-s-plain-crewneck-varsity-rib-h-s-t-shirt-272315-1597068881.jpg",
         name: "White Crewneck Varsity Rib Half Sleeves T-shirt",
         price: 299,
@@ -68,7 +68,7 @@ export const MenData = {
         trending: true
       },
       {
-        id: "men-half-sleeve-tshirt-7",
+        id: "men-halfSleeveTshirt-7",
         img: "https://images.bewakoof.com/t540/men-s-half-sleeve-hoodie-t-shirt-men-s-plain-half-sleeve-melange-hoodie-t-shirt-283493-1611128000.jpg",
         name: "Men's Half Sleeve Hoodie T-Shirt",
         price: 449,
@@ -79,7 +79,7 @@ export const MenData = {
         trending: true
       },
       {
-        id: "men-half-sleeve-tshirt-8",
+        id: "men-halfSleeveTshirt-8",
         img: "https://images.bewakoof.com/t540/ba-ba-banana-half-sleeve-t-shirt-men-s-printed-t-shirts-344100-1617789694.jpg",
         name: "Ba Ba Banana Half Sleeve T-Shirt",
         price: 349,
@@ -90,7 +90,7 @@ export const MenData = {
         trending: false
       },
       {
-        id: "men-half-sleeve-tshirt-9",
+        id: "men-halfSleeveTshirt-9",
         img: "https://images.bewakoof.com/t540/pop-hope-half-sleeve-t-shirt-black-men-s-printed-t-shirts-300994-1606020679.jpg",
         name: "Pop Hope Half Sleeve T-Shirt Black",
         price: 349,
@@ -101,7 +101,7 @@ export const MenData = {
         trending: false
       },
       {
-        id: "men-half-sleeve-tshirt-10",
+        id: "men-halfSleeveTshirt-10",
         img: "https://images.bewakoof.com/t540/men-s-half-sleeves-henley-raglan-t-shirt-men-s-plain-half-sleeves-henley-raglan-t-shirt-330794-1617101685.jpg",
         name: "Yolo Yellow Raglan Henley T-Shirt",
         price: 399,
@@ -209,7 +209,7 @@ export const MenData = {
   women: {
     halfSleeveTshirt : [
       {
-        id: "women-half-sleeve-tshirt-1",
+        id: "women-halfSleeveTshirt-1",
         img: "https://images.bewakoof.com/t540/watermelon--aop-t-shirt-women-s-plain-half-sleeves-aop-t-shirts-338845-1614351440.jpg",
         name: "Watermelon AOP Half Sleeve T-Shirt  ",
         price: 399,
@@ -220,7 +220,7 @@ export const MenData = {
         whatsNew: false
       },
       {
-        id: "women-half-sleeve-tshirt-2",
+        id: "women-halfSleeveTshirt-2",
         img: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-women-s-half-sleeve-plain-t-shirt-232388-1592888004.jpg",
         name: "Jet Black 90's Half Sleeve T-shirt",
         price: 449,
@@ -231,7 +231,7 @@ export const MenData = {
         whatsNew: true
       },
       {
-        id: "women-half-sleeve-tshirt-3",
+        id: "women-halfSleeveTshirt-3",
         img: "https://images.bewakoof.com/t540/busy-doin-nothing-half-sleeve-t-shirt-dl-baby-pink-women-s-half-sleeve-printed-t-shirt-277548-1597299405.jpg",
         name: "Busy Doin Nothing Half Sleeve T-Shirt (DL)-Baby Pink",
         price: 279,
@@ -242,7 +242,7 @@ export const MenData = {
         whatsNew: true
       },
       {
-        id: "women-half-sleeve-tshirt-4",
+        id: "women-halfSleeveTshirt-4",
         img: "https://images.bewakoof.com/t540/black-crewneck-varsity-rib-half-sleeves-t-shirt-women-s-plain-crewneck-varsity-rib-h-s-t-shirt-272312-1595847726.jpg",
         name: "Black Crewneck Varsity Rib Half Sleeves T-shirt",
         price: 599,
@@ -253,7 +253,7 @@ export const MenData = {
         whatsNew: true
       },
       {
-        id: "women-half-sleeve-tshirt-5",
+        id: "women-halfSleeveTshirt-5",
         img: "https://images.bewakoof.com/t540/no-bad-days-hyper-print-boyfriend-t-shirt-dl-white-women-s-hyper-print-boyfriend-t-shirt-326751-1617720653.jpg",
         name: "No Bad Days Boyfriend half sleeve T-shirt (DL)",
         price: 659,
@@ -264,7 +264,7 @@ export const MenData = {
         whatsNew: true
       },
       {
-        id: "women-half-sleeve-tshirt-6",
+        id: "women-halfSleeveTshirt-6",
         img: "https://images.bewakoof.com/t540/nakhre-always-on-women-s-half-sleeve-printed-t-shirt-344048-1617389064.jpg",
         name: "Nakhre always On Women's Printed White T-shirt",
         price: 449,
@@ -275,7 +275,7 @@ export const MenData = {
         whatsNew: true
       },
       {
-        id: "women-half-sleeve-tshirt-7",
+        id: "women-halfSleeveTshirt-7",
         img: "https://images.bewakoof.com/t540/wonder-woman-stripe-dcl-women-s-plain-half-sleeves-aop-t-shirts-307267-1616504902.jpg",
         name: "Wonder Woman stripe (DCL) AOP T-Shirt",
         price: 699,
@@ -286,7 +286,7 @@ export const MenData = {
         whatsNew: true
       },
       {
-        id: "women-half-sleeve-tshirt-8",
+        id: "women-halfSleeveTshirt-8",
         img: "https://images.bewakoof.com/t540/black-camo-plain-raglan-boyfriend-camo-t-shirt-women-s-plain-raglan-boyfriend-camo-t-shirt-277573-1605196865.jpg",
         name: "Black Camo Plain Raglan Boyfriend Camo T-Shirt",
         price: 799,

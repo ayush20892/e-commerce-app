@@ -3,7 +3,7 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { MenData } from "../../menData.js";
 import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
-import { CheckItem } from "../../util.js"
+import { CheckItem} from "../../util.js"
 import { Link, useNavigate } from "react-router-dom"
 import { useParams } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';

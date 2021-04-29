@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 
-.wishList-card > .card-card > div > img{
+.wishList-card > .card-card > div > a > img{
   width: 100%;
 }
 

@@ -1,9 +1,10 @@
 import "./wishListCard.css";
 import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
-import { CheckItem } from "../../util.js"
+import { CheckItem,CategoryMatch, ProductTypeMatch } from "../../util.js"
 import { Link } from "react-router-dom"
 import { useMediaQuery } from 'react-responsive';
+import { MenData} from "../../menData.js"
 
 export function WishListCard() {
   const isMobile = useMediaQuery({ query: `(min-width: 500px)` });
@@ -20,7 +21,9 @@ export function WishListCard() {
           <span onClick={() =>
             dispatchWishList({ type: "DELETE-FROM-WISHLIST", payload: item })
           }>&times;</span>
-          <img src={item.img} alt=".." />
+          <Link to={`/${CategoryMatch(item.id)[0]}/${ProductTypeMatch(item.id)[0]}/${item.id}`}>
+            <img src={item.img} alt=".." />
+          </Link>
         </div>
         <div className="card-detail">
           <h4>{item.name}</h4>

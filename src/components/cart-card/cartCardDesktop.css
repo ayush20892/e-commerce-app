@@ -47,9 +47,10 @@
   }
   
   .card-vertical > .card-ver-box > 
-  .card-card-ver > img{
+  .card-card-ver >  img{
     max-width:  25%;
     margin-left: 2%;
+    cursor: pointer;
   }
   
   .card-vertical > .card-ver-box >

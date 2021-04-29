@@ -2,13 +2,14 @@ import "./cartCardDesktop.css";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
-import { CheckItem } from "../../util.js"
-import { Link } from "react-router-dom"
+import { CheckItem, CategoryMatch, ProductTypeMatch  } from "../../util.js"
+import { useNavigate } from "react-router-dom"
 import { useEffect } from "react";
 
 export function CartCardDesktop() {
   const { stateCart, dispatchCart } = useCart();
   const { stateWishList, dispatchWishList } = useWishList();
+  const navigate = useNavigate()
 
 
   const cartItems = () => {
@@ -26,7 +27,9 @@ export function CartCardDesktop() {
         {stateCart.itemsInCart.map(item => (
           <div className="card-ver-box">
             <div key={item.id} className=" card-card-ver">
-              <img src={item.img} alt=".." />
+              
+              <img src={item.img} alt=".." onClick={() => navigate(`/${CategoryMatch(item.id)[0]}/${ProductTypeMatch(item.id)[0]}/${item.id}`)}/>
+              
               <div className="card-detail">
                 <h4>{item.name}</h4>
                 <h5>₹ {item.price} <strike>{item.beforeDiscount}</strike></h5>

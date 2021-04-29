@@ -3,7 +3,7 @@ import { useCart } from "../../context/cartContext.js"
 
 
 export function CheckOutFooter(){
-  const { stateCart, dispatchCart } = useCart();
+  const { stateCart } = useCart();
   return(
     <footer>
       <div className="checkout-items">

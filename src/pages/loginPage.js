@@ -1,5 +1,5 @@
 import { HomeHeader } from "../components/header/homeHeader.js";
-import { HomeMain } from "../components/home-main/homeMain.js";
+import { LoginMain } from "../components/login-main/loginMain.js";
 import { Footer } from "../components/footer/footer.js";
 
 export function LoginPage() {

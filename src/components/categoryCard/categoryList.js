@@ -1,5 +1,4 @@
 import "./categoryList.css"
-import { MenData } from "../../menData.js"
 import { CategoryData } from "../../categoryData.js"
 import { useNavigate, useParams } from "react-router-dom"
 

@@ -13,7 +13,6 @@ export function HomeMain()
 {
   const navigate = useNavigate()
   const isMobile = useMediaQuery({ query: `(max-width: 500px)` });
-  console.log("Home",isMobile)
   return(
     <main>
       <div className="categories">
@@ -63,7 +62,7 @@ export function HomeMain()
             if(isMobile && item.trending)
             {
               return(
-                <div onClick={() => navigate(`/men/halfSleeveTshirt/${item.id}`)} className="trendingCard">
+                <div key={item.id} onClick={() => navigate(`/men/halfSleeveTshirt/${item.id}`)} className="trendingCard">
                   <img src={item.img} alt=".."/>
                   <div className="trendingPrice">
                     ₹{item.price}
@@ -81,7 +80,7 @@ export function HomeMain()
           if(!isMobile)
           {
             return(
-              <div onClick={() => navigate(`/men/halfSleeveTshirt/${item.id}`)} className="trendingCard">
+              <div key={item.id} onClick={() => navigate(`/men/halfSleeveTshirt/${item.id}`)} className="trendingCard">
                 <img src={item.img} alt=".."/>
                 <div className="trendingPrice">
                   ₹{item.price}
@@ -110,7 +109,7 @@ export function HomeMain()
             if(isMobile && item.whatsNew)
             {
               return(
-                <div onClick={() => navigate(`/women/halfSleeveTshirt/${item.id}`)} className="trendingCard">
+                <div key={item.id} onClick={() => navigate(`/women/halfSleeveTshirt/${item.id}`)} className="trendingCard">
                   <img src={item.img} alt=".."/>
                   <div className="trendingPrice">
                     ₹{item.price}
@@ -128,7 +127,7 @@ export function HomeMain()
           if(!isMobile)
           {
             return(
-              <div onClick={() => navigate(`/women/halfSleeveTshirt/${item.id}`)} className="trendingCard">
+              <div key={item.id} onClick={() => navigate(`/women/halfSleeveTshirt/${item.id}`)} className="trendingCard">
                 <img src={item.img} alt=".."/>
                 <div className="trendingPrice">
                   ₹{item.price}
@@ -143,7 +142,7 @@ export function HomeMain()
       }
         </div>
         <h4>
-          <Link to="/men/halfSleeveTshirt" style={{color: "aqua"}}>
+          <Link to="/women/halfSleeveTshirt" style={{color: "aqua"}}>
             VIEW ALL
           </Link>
         </h4>

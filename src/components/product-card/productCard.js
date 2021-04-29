@@ -6,10 +6,8 @@ import { useWishList } from "../../context/wishListContext.js"
 import { CheckItem } from "../../util.js"
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom";
-import { useMediaQuery } from 'react-responsive';
 
 export function ProductCard() {
-  const isMobile = useMediaQuery({ query: `(min-width: 500px)` });
   const { stateCart,dispatchCart } = useCart()
   const { stateWishList,dispatchWishList } = useWishList() 
   const { categoryName, productType } = useParams()

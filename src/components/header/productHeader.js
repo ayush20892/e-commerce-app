@@ -21,7 +21,7 @@ export function ProductHeader({header}){
         <Link to="/wishList" style={{textDecoration: "none", color: "black"}}>
         {stateWishList.itemsInWishList.length === 0 ?<BsHeart style={{fontSize: "1.5rem", marginTop: "0.25rem"}}/> 
         :
-        <BsHeartFill style={{fontSize: "1.5rem", marginTop: "0.25rem", fill: "lightgreen"}}/>
+        <BsHeartFill style={{fontSize: "1.5rem", marginTop: "0.25rem", fill: "var(--primary-color)"}}/>
         }
         </Link>
 

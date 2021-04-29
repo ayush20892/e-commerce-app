@@ -15,7 +15,6 @@ export function CategoryMatch(str)
 
 export function ProductTypeMatch(str)
 {
-    var result = str.match(/(-halfSleeveTshirt-|-shirt-|-kurti-)/)
-    var result1 = str.match(/(halfSleeveTshirt|shirt|kurti)/)
-    return result1;
+    var result = str.match(/(halfSleeveTshirt|shirt|kurti)/)
+    return result;
 }

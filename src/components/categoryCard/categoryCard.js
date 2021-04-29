@@ -2,7 +2,6 @@ import "./categoryCard.css"
 import menCategory from "../categoryImages/menCategory.jpg"
 import womenCategory from "../categoryImages/womenCategory.jpg"
 import gadgetCategory from "../categoryImages/gadgetCategory.jpg"
-import { MenData } from "../../menData.js"
 import { Link } from "react-router-dom"
 
 export function CategoryCard()

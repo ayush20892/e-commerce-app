@@ -4,7 +4,6 @@ import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
 import { CheckItem, CategoryMatch, ProductTypeMatch } from "../../util.js"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react";
 
 export function CartCard() {
   const { stateCart, dispatchCart } = useCart();
@@ -14,7 +13,7 @@ export function CartCard() {
   return(
     <div className="card-vertical">
       {stateCart.itemsInCart.map(item => (
-        <div className="card-ver-box">
+        <div key={item.id} className="card-ver-box">
           <div key={item.id} className=" card-card-ver">
             <img src={item.img} alt=".." onClick={() => navigate(`/${CategoryMatch(item.id)[0]}/${ProductTypeMatch(item.id)[0]}/${item.id}`)}/>
             <div className="card-detail">

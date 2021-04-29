@@ -4,7 +4,7 @@ import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
 import { CheckItem, CategoryMatch, ProductTypeMatch  } from "../../util.js"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react";
+
 
 export function CartCardDesktop() {
   const { stateCart, dispatchCart } = useCart();

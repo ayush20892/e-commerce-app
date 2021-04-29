@@ -7,6 +7,7 @@ import { Home } from "./pages/home.js"
 import { ProductPage } from "./pages/productPage.js"
 import { Categories } from "./pages/categories.js"
 import { CategoryPage } from "./pages/categoryPage.js"
+import { LoginPage } from "./pages/loginPage.js"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/:categoryName/:productType/:productID" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishList" element={<WishList />} />
+        <Route path="/login" element={<LoginPage/>} />
     </Routes>
     </div>
   );

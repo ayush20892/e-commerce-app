@@ -4,7 +4,6 @@ import { useWishList } from "../../context/wishListContext.js"
 import { CheckItem,CategoryMatch, ProductTypeMatch } from "../../util.js"
 import { Link } from "react-router-dom"
 import { useMediaQuery } from 'react-responsive';
-import { MenData} from "../../menData.js"
 
 export function WishListCard() {
   const isMobile = useMediaQuery({ query: `(min-width: 500px)` });

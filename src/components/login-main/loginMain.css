@@ -1,0 +1,147 @@
+.login-main{
+  display: flex;
+  justify-content: center;
+}
+
+.login-box{
+  border: 1px solid white;
+  border-radius: 10%;
+  box-shadow: 10px 10px 8px 8px #888888;
+  width: 20rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box > img{
+  width: 90%;
+  align-self: center;
+  display: none;
+}
+
+.login-box > .login-form{
+  padding: 2% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > h3{
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.login-box > .login-form > input{
+  width: 80%;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  border-color: lightgrey;
+  margin: 0.5rem;
+}
+
+.login-box > .login-form > button{
+  width: 90%;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  color: blanchedalmond;
+  font-weight: 700;
+  background-color: #4169e1;
+  border-color: #4169e1;
+  box-shadow: 10px 8px 8px #888888;
+  cursor: pointer;
+}
+
+.login-box > .login-form > h5{
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.login-box > .login-form > h5 > span{
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+
+@media screen and (min-width: 500px) {
+
+  .login-main{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login-box{
+    border: 1px solid white;
+    border-radius: 10%;
+    box-shadow: 10px 10px 8px 8px #888888;
+    width: 20rem;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-box > img{
+    width: 90%;
+    align-self: center;
+    display: inline;
+  }
+
+  .login-box > .login-form{
+    padding: 2% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form > h3{
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 550;
+    font-size: 1.2rem;
+  }
+
+  .login-box > .login-form > input{
+    width: 80%;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    border-color: lightgrey;
+    margin: 0.5rem;
+  }
+
+  .login-box > .login-form > button{
+    width: 90%;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    color: blanchedalmond;
+    font-weight: 700;
+    background-color: #4169e1;
+    border-color: #4169e1;
+    box-shadow: 10px 8px 8px #888888;
+    cursor: pointer;
+  }
+
+  .login-box > .login-form > h5{
+    margin: 0;
+    font-size: 0.65rem;
+    font-weight: 500;
+  }
+
+  .login-box > .login-form > h5 > span{
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+
+}

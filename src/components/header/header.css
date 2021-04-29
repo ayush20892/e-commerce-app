@@ -79,6 +79,7 @@ nav > .side-icon > a > span{
   background-color: var(--primary-color);
   padding: 0rem 0.2rem;
   border: 0.2px solid var(--primary-color);
+  font-weight: 500;
   border-radius: 50%;
 }
 

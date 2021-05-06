@@ -3,6 +3,8 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { MenData } from "../../menData.js";
 import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
+import { useProduct } from "../../context/productContext.js"
+import { getSortedData, getFilteredData } from "../../reducer/productReducer.js"
 import { CheckItem} from "../../util.js"
 import { Link, useNavigate } from "react-router-dom"
 import { useParams } from "react-router-dom";
@@ -10,10 +12,13 @@ import { useParams } from "react-router-dom";
 export function ProductCardDesktop() {
   const { stateCart,dispatchCart } = useCart()
   const { stateWishList,dispatchWishList } = useWishList() 
+  const { stateProduct, dispatchProduct } = useProduct();
   const { categoryName, productType } = useParams()
   const productList = MenData[categoryName][productType]
   const navigate = useNavigate()
-  console.log(categoryName, productType)
+  
+  const sortedData = getSortedData(productList,stateProduct.sortby)
+  const filteredData = getFilteredData(sortedData, stateProduct.outOfStock,   stateProduct.fastDelivery)
   return(
     <div>
     <div className="category-name">
@@ -36,11 +41,11 @@ export function ProductCardDesktop() {
               <h5> <input 
               name="choice"  
               type="radio"
-              onClick/> <span>High To Low</span></h5>
+              onClick={() => dispatchProduct({type: "SORT", payload: "HIGH-TO-LOW"})}/> <span>High To Low</span></h5>
               <h5><input 
               name="choice"  
               type="radio"
-              onClick/> <span>Low To High </span></h5>
+              onClick={() => dispatchProduct({type: "SORT", payload: "LOW-TO-HIGH"})}/> <span>Low To High </span></h5>
             </div>
           </div>
 
@@ -51,13 +56,13 @@ export function ProductCardDesktop() {
                 <input 
                 name="choice"  
                 type="checkbox"
-                onChange/> <span>Include Out of Stock</span>
+                onChange={() => dispatchProduct({type: "TOGGLE-STOCK"})}/> <span>Include Out of Stock</span>
               </h5>
               <h5> 
                 <input 
                 name="choice"  
                 type="checkbox"
-                onChange/> <span>Fast delivery Only</span>
+                onChange={() => dispatchProduct({type: "TOGGLE-DELIVERY"})}/> <span>Fast delivery Only</span>
               </h5>
             </div>
           </div>
@@ -65,7 +70,7 @@ export function ProductCardDesktop() {
         </div>
 
         <div className="product-card">
-        {productList.map(item => (
+        {filteredData.map(item => (
           <div key={item.id} className="card-card">
             <div>
               <span>

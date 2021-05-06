@@ -309,7 +309,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: true
       },
       {
         id: "women-kurti-2",
@@ -331,7 +331,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: true
       },
       {
         id: "women-kurti-4",
@@ -342,7 +342,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: false,
       },
       {
         id: "women-kurti-5",
@@ -353,7 +353,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: true
       },
       {
         id: "women-kurti-6",
@@ -364,7 +364,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: true
       },
       {
         id: "women-kurti-7",
@@ -375,7 +375,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: true
       },
       {
         id: "women-kurti-8",
@@ -386,7 +386,7 @@ export const MenData = {
         quantity: 1,
         inStock: true,
         fastDeliveryAvailable: false,
-        trending: false
+        trending: true
       },
     ]
   

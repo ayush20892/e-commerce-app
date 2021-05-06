@@ -3,9 +3,10 @@ import menCategory from "../categoryImages/menCategory.jpg"
 import womenCategory from "../categoryImages/womenCategory.jpg"
 import gadgetCategory from "../categoryImages/gadgetCategory.jpg"
 import ecomHoarding from "./ecomHoarding.jpg"
-import { MenData } from "../../menData.js"
 import { Link, useNavigate } from "react-router-dom"
 import { useMediaQuery } from 'react-responsive';
+import { useState, useEffect } from "react"
+import axios from "axios";
 
 
 
@@ -13,6 +14,20 @@ export function HomeMain()
 {
   const navigate = useNavigate()
   const isMobile = useMediaQuery({ query: `(max-width: 500px)` });
+  
+
+  const [ products, setProducts] = useState({ menTrending: [], womenWhatsNew: [] })
+  console.log(products)
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await axios.get("https://express-neog.herokuapp.com/products")
+      setProducts({ menTrending: data.products[0].halfSleeveTshirt, 
+                    womenWhatsNew: data.products[2].kurti })
+    })();
+  },[])
+
+
   return(
     <main>
       <div className="categories">
@@ -58,7 +73,7 @@ export function HomeMain()
       <div className="trending">
         <h2>Trending</h2>
         <div className="trendingProducts">
-          {MenData.men.halfSleeveTshirt.map(item => {
+          {products.menTrending.map(item => {
             if(isMobile && item.trending)
             {
               return(
@@ -76,7 +91,7 @@ export function HomeMain()
           })
         }
 
-        {MenData.men.halfSleeveTshirt.map(item => {
+        {products.menTrending.map(item => {
           if(!isMobile)
           {
             return(
@@ -105,11 +120,11 @@ export function HomeMain()
       <div className="trending">
         <h2>What's New</h2>
         <div className="trendingProducts">
-          {MenData.women.halfSleeveTshirt.map(item => {
-            if(isMobile && item.whatsNew)
+          {products.womenWhatsNew.map(item => {
+            if(isMobile && item.trending)
             {
               return(
-                <div key={item.id} onClick={() => navigate(`/women/halfSleeveTshirt/${item.id}`)} className="trendingCard">
+                <div key={item.id} onClick={() => navigate(`/women/kurti/${item.id}`)} className="trendingCard">
                   <img src={item.img} alt=".."/>
                   <div className="trendingPrice">
                     ₹{item.price}
@@ -123,11 +138,11 @@ export function HomeMain()
           })
         }
 
-        {MenData.women.halfSleeveTshirt.map(item => {
+        {products.womenWhatsNew.map(item => {
           if(!isMobile)
           {
             return(
-              <div key={item.id} onClick={() => navigate(`/women/halfSleeveTshirt/${item.id}`)} className="trendingCard">
+              <div key={item.id} onClick={() => navigate(`/women/kurti/${item.id}`)} className="trendingCard">
                 <img src={item.img} alt=".."/>
                 <div className="trendingPrice">
                   ₹{item.price}
@@ -142,7 +157,7 @@ export function HomeMain()
       }
         </div>
         <h4>
-          <Link to="/women/halfSleeveTshirt" style={{color: "aqua"}}>
+          <Link to="/women/kurti" style={{color: "aqua"}}>
             VIEW ALL
           </Link>
         </h4>

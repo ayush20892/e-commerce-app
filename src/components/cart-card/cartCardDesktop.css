@@ -139,6 +139,10 @@
     font-size: 0.8rem;
   }
 
+  .checkout-box-condition{
+    display: none;
+  }
+
   .checkout-box > .heading{
     padding: 0.3rem 1rem;
     font-weight: 570;
@@ -166,6 +170,10 @@
     padding: 0.2rem 0.5rem;
     margin-top: 1.5rem;
     text-align: left;
+  }
+
+  .checkout-box > .payment-box > .saving-label-condition{
+    display: none;
   }
 
   .checkout-box > .payment-box > .saving-label > p{

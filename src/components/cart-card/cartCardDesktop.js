@@ -36,13 +36,13 @@ export function CartCardDesktop() {
                 
                 <div className="qty">
                   <button onClick={() => dispatchCart({type:"DEC-QTY", payload: item })} disabled={!(item.quantity - 1)}>
-                    <AiOutlineMinus style={{margin: "0rem 1.5rem"}}/>
+                    <AiOutlineMinus style={{margin: "0rem 1.5rem", fontSize: "1.4rem"}}/>
                   </button>
 
                   <h5>{item.quantity}</h5>
 
                   <button onClick={() => dispatchCart({type:"INC-QTY", payload: item })}>
-                    <AiOutlinePlus style={{margin: "0rem 1.5rem"}}/>
+                    <AiOutlinePlus style={{margin: "0rem 1.5rem", fontSize: "1.4rem"}}/>
                   </button>
 
                 </div>

@@ -92,6 +92,7 @@ nav > .side-icon > a > span{
   border-radius: 50%;
 }
 
+
 @media screen and (min-width: 500px) {
 
 
@@ -133,7 +134,7 @@ nav > .side-icon > a > span{
     font-size: 0.9rem;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 580;
+    font-weight: 600;
   }
 
   nav > .ham-brand > .brand-icon > img{
@@ -151,6 +152,8 @@ nav > .side-icon > a > span{
   nav  > .ham-brand > .nav-pills > h5{
     margin: 0rem 0rem;
     cursor: pointer;
+    font-weight: 550;
+    font-size: 0.9rem;
   }
 
   nav > .side-icon > a > .user{

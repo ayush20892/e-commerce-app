@@ -17,13 +17,12 @@ export function HomeMain()
   
 
   const [ products, setProducts] = useState({ menTrending: [], womenWhatsNew: [] })
-  console.log(products)
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get("https://express-neog.herokuapp.com/products")
+      const { data } = await axios.get("https://express-neog.herokuapp.com/ecom")
       setProducts({ menTrending: data.products[0].halfSleeveTshirt, 
-                    womenWhatsNew: data.products[2].kurti })
+                    womenWhatsNew: data.products[1].kurti })
     })();
   },[])
 
@@ -56,8 +55,9 @@ export function HomeMain()
 
       <div className="hoarding">
 
-        <img src={ecomHoarding} alt=".." />
-        <div className="hoardingText">
+        <img src={ecomHoarding} alt=".." onClick={() => navigate("/women/kurti")}/>
+
+        <div className="hoardingText" onClick={() => navigate("/women/kurti")}>
 
           <span style={{fontSize: "1.5rem"}}>
             FLAT 500 OFF

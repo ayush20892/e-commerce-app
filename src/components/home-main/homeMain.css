@@ -40,6 +40,7 @@ main > .hoarding{
 
 main > .hoarding > img{
   width: 100%;
+  cursor: pointer;
 }
 
 main > .hoarding > .hoardingText{
@@ -51,6 +52,7 @@ main > .hoarding > .hoardingText{
   font-weight: bolder;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 main > .trending{

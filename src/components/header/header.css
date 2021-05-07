@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 nav{
   background-color: white;
   z-index: 1;
@@ -12,7 +14,7 @@ nav{
 nav > .ham-brand{
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   position: relative;
 }
 
@@ -30,11 +32,18 @@ nav > .ham-brand > h4{
   left: 0.3rem
 }
 
-nav > .ham-brand > .brand-icon > h4{
+nav > .ham-brand > .brand-icon{
+  display: flex;
+  align-items: center;
+}
+
+nav > .ham-brand > .brand-icon > h5{
   position: relative;
   /* bottom: 0.7rem; */
   margin: 0rem 0rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0.2rem;
 }
 
 nav > .ham-brand > .brand-icon > img {
@@ -112,19 +121,24 @@ nav > .side-icon > a > span{
 
   nav > .ham-brand > .brand-icon{
     cursor: pointer;
+    justify-content: space-between;
+    gap: 0rem;
+    width: 120%;
   }
 
-  nav > .ham-brand > .brand-icon > h4{
-    position: relative;
-    /* bottom: 0.7rem; */
+  nav > .ham-brand > .brand-icon > h5{
+    bottom: 0rem;
+    width: 120px;
     margin: 0rem 0rem;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 580;
   }
 
   nav > .ham-brand > .brand-icon > img{
     display: inline;
-    width: 60%;
+    width: 25%;
   }
 
   nav > .ham-brand > .nav-pills{

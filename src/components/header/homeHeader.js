@@ -20,7 +20,7 @@ export function HomeHeader(){
         </div>
         <div className="brand-icon" onClick={() => navigate("/")}>
           <img src={icon64} alt="brand icon" />
-          <h4></h4>
+          <h5>U N U S U A L</h5>
         </div>
         <div className="nav-pills">
           <h5 onClick={() => navigate('/categories/men')} className="nav-item">MEN</h5>

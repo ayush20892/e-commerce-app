@@ -21,7 +21,7 @@ export function ProductCard() {
           <span>
             { CheckItem(stateWishList.itemsInWishList, item) ? 
               <div onClick={() => dispatchWishList({type:"DELETE-FROM-WISHLIST", payload: item })}>
-            <BsHeartFill  style={{fill: "lightgreen"}}/>
+            <BsHeartFill  style={{fill: "var(--primary-color)"}}/>
             </div>
             : 
             <div onClick={() => dispatchWishList({type:"ADD-TO-WISHLIST", payload: item })}>

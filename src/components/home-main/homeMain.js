@@ -17,10 +17,12 @@ export function HomeMain()
   
 
   const [ products, setProducts] = useState({ menTrending: [], womenWhatsNew: [] })
+  console.log(products)
 
   useEffect(() => {
     (async () => {
       const { data } = await axios.get("https://express-neog.herokuapp.com/ecom")
+      console.log(data)
       setProducts({ menTrending: data.products[0].halfSleeveTshirt, 
                     womenWhatsNew: data.products[1].kurti })
     })();

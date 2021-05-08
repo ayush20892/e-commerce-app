@@ -12,7 +12,7 @@ export function Footer() {
       <div className="footer-icons">
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <AiOutlineHome
-            style={{ fontSize: "1.8rem", marginTop: "0.7rem", cursor: "pointer" }}
+            style={{ fontSize: "1.6rem", marginTop: "0.5rem", cursor: "pointer" }}
           />
           <h4>Home</h4>
         </Link>
@@ -20,18 +20,18 @@ export function Footer() {
           to="/categories"
           style={{ textDecoration: "none", color: "black" }}
         >
-          <BsInboxes style={{ fontSize: "1.8rem", marginTop: "0.9rem" }} />
+          <BsInboxes style={{ fontSize: "1.6rem", marginTop: "0.7rem" }} />
           <h4>Category</h4>
         </Link>
 
         <Link to="/wishList" style={{ textDecoration: "none", color: "black" }}>
           {stateWishList.itemsInWishList.length === 0 ? (
-            <BsHeart style={{ fontSize: "1.8rem", marginTop: "0.8rem" }} />
+            <BsHeart style={{ fontSize: "1.6rem", marginTop: "0.6rem" }} />
           ) : (
             <BsHeartFill
               style={{
-                fontSize: "1.8rem",
-                marginTop: "0.8rem",
+                fontSize: "1.6rem",
+                marginTop: "0.6rem",
                 fill: "var(--primary-color",
               }}
             />
@@ -41,7 +41,7 @@ export function Footer() {
 
         <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
           <HiOutlineUserCircle
-            style={{ fontSize: "1.8rem", marginTop: "0.9rem" }}
+            style={{ fontSize: "1.6rem", marginTop: "0.7rem" }}
           />
           <h4>My Account</h4>
         </Link>

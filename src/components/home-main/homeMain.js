@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useMediaQuery } from 'react-responsive';
 import { useState, useEffect } from "react"
 import axios from "axios";
+import { Loader } from "../loader/loader.js"
 
 
 
@@ -17,14 +18,19 @@ export function HomeMain()
   
 
   const [ products, setProducts] = useState({ menTrending: [], womenWhatsNew: [] })
-  console.log(products)
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get("https://express-neog.herokuapp.com/ecom")
-      console.log(data)
-      setProducts({ menTrending: data.products[data.products.findIndex(item => item.categoryName === "men")].halfSleeveTshirt, 
+      try {
+        setLoader(true);
+        const { data } = await axios.get("https://express-neog.herokuapp.com/ecom")
+        setProducts({ menTrending: data.products[data.products.findIndex(item => item.categoryName === "men")].halfSleeveTshirt, 
                     womenWhatsNew: data.products[data.products.findIndex(item => item.categoryName === "women")].kurti })
+        setLoader(false);
+      } catch (err) {
+        console.error(err);
+      }
     })();
   },[])
 
@@ -75,7 +81,7 @@ export function HomeMain()
       <div className="trending">
         <h2>Trending</h2>
         <div className="trendingProducts">
-          {products.menTrending.map(item => {
+          {loader ? <Loader/> : products.menTrending.map(item => {
             if(isMobile && item.trending)
             {
               return(
@@ -122,7 +128,7 @@ export function HomeMain()
       <div className="trending">
         <h2>What's New</h2>
         <div className="trendingProducts">
-          {products.womenWhatsNew.map(item => {
+          {loader ? <Loader/> : products.womenWhatsNew.map(item => {
             if(isMobile && item.trending)
             {
               return(

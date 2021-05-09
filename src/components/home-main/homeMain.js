@@ -23,8 +23,8 @@ export function HomeMain()
     (async () => {
       const { data } = await axios.get("https://express-neog.herokuapp.com/ecom")
       console.log(data)
-      setProducts({ menTrending: data.products[0].halfSleeveTshirt, 
-                    womenWhatsNew: data.products[2].kurti })
+      setProducts({ menTrending: data.products[data.products.findIndex(item => item.categoryName === "men")].halfSleeveTshirt, 
+                    womenWhatsNew: data.products[data.products.findIndex(item => item.categoryName === "women")].kurti })
     })();
   },[])
 

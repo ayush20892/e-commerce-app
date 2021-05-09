@@ -1,21 +1,41 @@
 import "./productCard.css";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
-import { MenData } from "../../menData.js";
 import { useCart } from "../../context/cartContext.js"
 import { useWishList } from "../../context/wishListContext.js"
 import { CheckItem } from "../../util.js"
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { Loader } from "../../components/loader/loader.js"
 
 export function ProductCard() {
   const { stateCart,dispatchCart } = useCart()
   const { stateWishList,dispatchWishList } = useWishList() 
   const { categoryName, productType } = useParams()
-  const productList = MenData[categoryName][productType]
-  console.log(categoryName, productType)
+
+  const [ products, setProducts] = useState([])
+  const [ loader, setLoader] = useState(false)
+
+  useEffect(() => {
+    (async () => {
+      try{
+      setLoader(true)
+      const { data } = await axios.get("https://express-neog.herokuapp.com/ecom")
+      setProducts(data.products[data.products.findIndex(item => item.categoryName === categoryName)][productType])
+      setLoader(false)
+      } catch (err) {
+        console.error(err)
+      }
+    })();
+  },[categoryName,productType])
+
+
+
+
   return(
     <div className="product-card">
-    {productList.map(item => (
+    {loader ? <Loader/> : products.map(item => (
       <div key={item.id} className="card-card">
         <div>
           <span>

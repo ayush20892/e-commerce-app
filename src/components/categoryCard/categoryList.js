@@ -1,11 +1,12 @@
 import "./categoryList.css"
-import { CategoryData } from "../../categoryData1.js"
+import { CategoryData } from "../../categoryData.js"
 import { useNavigate, useParams } from "react-router-dom"
 
 export function CategoryList(){
   const navigate = useNavigate()
   const {categoryName} = useParams()
-  const itemList1 = CategoryData[categoryName]
+  const itemList = CategoryData[CategoryData.findIndex(item => item.categoryName === categoryName)].productType
+  console.log(itemList)
   return(
     <div className="category">
       <div className="header">
@@ -13,7 +14,7 @@ export function CategoryList(){
         <h3>{categoryName.toUpperCase()}</h3>
       </div>
       <div className="category-list">
-          {itemList1.map(item => (
+          {itemList.map(item => (
             <div key={item.id} onClick={() => navigate(`/${categoryName}/${item.page}`)} className="category-item">
               <img src={item.img} alt=".." />
               <div className="category-detail">

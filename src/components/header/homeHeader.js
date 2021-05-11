@@ -15,9 +15,6 @@ export function HomeHeader(){
     <>
     <nav>
       <div className="ham-brand">
-        <div style={{top: "-0.3rem"}} className="ham-icon" >
-          &#9776;
-        </div>
         <div className="brand-icon" onClick={() => navigate("/")}>
           <img src={icon64} alt="brand icon" />
           <h5>U N U S U A L</h5>

@@ -3,7 +3,7 @@
   div > .category-name{
     margin-top: 3.5rem;
     margin-left: 8%;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: gray;
   }
 
@@ -22,7 +22,7 @@
     margin-bottom: 0.2rem;
     color: black;
     font-weight: 580;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-bottom: 0.5px solid lightgray;
   }
 
@@ -31,7 +31,7 @@
     margin-top: 2.2rem;
     color: gray;
     font-weight: 580;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
 
@@ -46,7 +46,7 @@
 
   .product-card-desktop > .filter-items{
     width: 25%;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .product-card-desktop > .filter-items > .filter-sort{
@@ -56,7 +56,7 @@
 
   .product-card-desktop > .filter-items > .filter-sort > h4{
     color: gray;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 550;
     margin: 0;
     margin-bottom: 0.5rem;
@@ -71,7 +71,7 @@
 
   .product-card-desktop > .filter-items > .filter-sort > .filtering-items > h5{
     color: black;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     font-weight: 550;
     padding: 0.05rem 0.5rem;
     margin: 0;
@@ -102,14 +102,15 @@
   .product-card-desktop > .product-card{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    align-content: space-around;
+    margin-top: 2rem;
     width: 90%;
   }
   
   .product-card-desktop > .product-card > .card-card{
     position: relative;
     width: 32%;
-    padding: 0.2rem 0.08rem;
+    padding: 0.5rem 0.08rem;
   }
   
   .product-card-desktop > .product-card > .card-card > div{
@@ -142,7 +143,7 @@
   }
   
   .product-card-desktop > .product-card > .card-card > .card-detail > a > h4{
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 500;
     margin: 0rem 0rem;
   }

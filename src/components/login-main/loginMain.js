@@ -11,7 +11,7 @@ export function LoginMain() {
           <h3>Login</h3>
           <input  placeholder="Username"/>
           <input type="password" placeholder="Password" />
-          <button>Login</button>
+          <button>Continue</button>
           <h5>New to Website? <span>SIGN UP</span></h5>
         </div>
       </div>

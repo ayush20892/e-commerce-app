@@ -14,9 +14,6 @@ export function ProductPage() {
   const { categoryName, productType, productID } = useParams();
   const isMobile = useMediaQuery({ query: `(min-width: 500px)` });
 
-  const product = MenData[categoryName][productType].find(
-    (product) => product.id === productID
-  );
 
   const [products, setProducts] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -47,10 +44,10 @@ export function ProductPage() {
       {isMobile && <HomeHeader />}
       {!isMobile && <ProductHeader header="Product-Brand" />}
 
-      {isMobile && <ProductPageCardDesktop product={product} />}
+      {loader ? <Loader/> : isMobile && <ProductPageCardDesktop product={products} />}
       {loader ? <Loader/> : !isMobile && <ProductPageCard product={products} />}
 
-      <ProductPageFooter product={product} />
+      <ProductPageFooter product={products} />
     </>
   );
 }

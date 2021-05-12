@@ -23,7 +23,7 @@ export function ProductPage() {
       try {
         setLoader(true);
         const { data } = await axios.get(
-          "https://express-neog.herokuapp.com/ecom"
+          `${process.env.ENDPOINT}/ecom`
         );
         const category = data.products.findIndex(
           (item) => item.categoryName === categoryName

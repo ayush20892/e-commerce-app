@@ -4,10 +4,10 @@ import { Footer } from "../components/footer/footer.js";
 
 export function Home() {
   return (
-    <div> 
-      <HomeHeader/>
-      <HomeMain/>
-      <Footer/>
+    <div>
+      <HomeHeader />
+      <HomeMain />
+      <Footer />
     </div>
   );
 }

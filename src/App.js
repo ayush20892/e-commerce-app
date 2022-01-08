@@ -1,27 +1,112 @@
-import './App.css';
-import { Routes, Route } from "react-router-dom";
-import { ProductListing } from "./pages/products.js";
+import "./App.css";
+import { useState, useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import { PrivateRoute } from "./utils/PrivateRoute";
+import { ProductListing } from "./pages/productListing.js";
 import { Cart } from "./pages/cart.js";
 import { WishList } from "./pages/wishList.js";
-import { Home } from "./pages/home.js"
-import { ProductPage } from "./pages/productPage.js"
-import { Categories } from "./pages/categories.js"
-import { CategoryPage } from "./pages/categoryPage.js"
-import { LoginPage } from "./pages/loginPage.js"
+import { Home } from "./pages/home.js";
+import { ProductPage } from "./pages/productPage.js";
+import { Categories } from "./pages/categories.js";
+import { CategoryPage } from "./pages/categoryPage.js";
+import { UserPage } from "./pages/userPage.js";
+import { UpdateUserPage } from "./pages/userUpdatePage";
+import { Loader } from "./components/loader/loader";
+import { useAuth } from "./context/authContext";
+import {
+  getAllProducts,
+  getAllCartItems,
+  getAllWishlistItems,
+} from "./utils/networkCalls";
+import { ProductProvider } from "./context/productContext";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const session = JSON.parse(localStorage.getItem("session"));
+  const { authDispatch } = useAuth();
+  const navigate = useNavigate();
+
+  async function loadInitialData() {
+    const data = await getAllProducts();
+    if (data.success)
+      authDispatch({ type: "LOAD_PRODUCTS", payload: data.productResult });
+
+    if (session?.userId) {
+      const cartItems = await getAllCartItems();
+      const wishListItems = await getAllWishlistItems();
+
+      if (!cartItems.success) {
+        authDispatch({ type: "END_SESSION" });
+        navigate("/user/login", { replace: "true" });
+      }
+
+      const payload = {
+        userId: session?.userId,
+        cart: cartItems.cart,
+        wishlist: wishListItems.wishlist,
+      };
+      authDispatch({ type: "START_SESSION", payload });
+    }
+    setIsLoading(false);
+  }
+
+  useEffect(() => {
+    loadInitialData();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="loader">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:categoryName/:productType" element={<ProductListing />} />
-        <Route path="/categories" element={<Categories/>} />
-        <Route path="/categories/:categoryName" element={<CategoryPage/>}/>
-        <Route path="/:categoryName/:productType/:productID" element={<ProductPage />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishList" element={<WishList />} />
-        <Route path="/login" element={<LoginPage/>} />
-    </Routes>
+        <Route
+          path="/:categoryName/:productType"
+          element={
+            <ProductProvider>
+              <ProductListing />
+            </ProductProvider>
+          }
+        />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/categories/:categoryName" element={<CategoryPage />} />
+        <Route
+          path="/:categoryName/:productType/:productID"
+          element={<ProductPage />}
+        />
+        <Route
+          path="/cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/wishList"
+          element={
+            <PrivateRoute>
+              <WishList />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <PrivateRoute>
+              <UserPage />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/user/:action" element={<UserPage />} />
+        <Route path="/user/update/:updateType" element={<UpdateUserPage />} />
+      </Routes>
     </div>
   );
 }

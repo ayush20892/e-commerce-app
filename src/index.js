@@ -1,26 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-import { BrowserRouter as Router } from "react-router-dom"
-import { CartProvider } from "./context/cartContext.js"
-import { WishListProvider } from "./context/wishListContext.js"
-import { ProductProvider } from "./context/productContext.js"
+import { BrowserRouter as Router } from "react-router-dom";
+import { AuthProvider } from "./context/authContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <ProductProvider>
-        <CartProvider>
-          <WishListProvider>
-            <App />
-          </WishListProvider>
-        </CartProvider>
-        </ProductProvider>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-

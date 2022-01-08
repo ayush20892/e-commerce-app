@@ -75,6 +75,7 @@
   background-color: white;
   border: none;
   border-right: 0.3px solid gray;
+  cursor: pointer;
 }
 
 .card-ver-box > .card-ver-btn > .move-to-wish-btn{
@@ -82,5 +83,6 @@
   padding: 4% 0%;
   background-color: white;
   border: none;
+  cursor: pointer;
 }
 

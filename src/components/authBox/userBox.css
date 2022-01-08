@@ -1,0 +1,78 @@
+.user-container {
+  display: flex;
+  justify-content: center;
+}
+
+.user-box {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* box-shadow: 5px 10px 8px 8px #888888; */
+  padding: 20px 10px;
+}
+
+.user-box > h1 {
+  text-align: center;
+}
+
+.user-box > h4 > span {
+  float: right;
+  margin-left: 20px;
+  font-size: 15px;
+  background-color: whitesmoke;
+  border: 0.5px solid black;
+  border-radius: 0.5rem;
+  padding: 5px;
+  color: black;
+}
+
+.user-box > .update-pwd-btn {
+  margin: 10px 0;
+}
+
+.user-box > .update-pwd-btn > button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 0.5px solid black;
+  border-radius: 0.5rem;
+  color: black;
+  font-weight: 500;
+}
+
+.user-box > .btn {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.user-box > .btn > button {
+  background-color: lightsalmon;
+  color: beige;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px 70px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-color: lightsalmon;
+}
+
+@media screen and (min-width: 500px) {
+  .user-box {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 0.5px solid black; */
+    border-radius: 0.5rem;
+    box-shadow: 5px 10px 8px 8px #888888;
+    padding: 20px 100px;
+  }
+
+  .user-box > h4 > span {
+    float: right;
+    margin-left: 40px;
+    font-size: 15px;
+  }
+}

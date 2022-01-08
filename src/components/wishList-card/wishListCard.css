@@ -1,4 +1,4 @@
-.wishList-card{
+.wishList-card {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 5rem;
@@ -9,9 +9,12 @@
   position: relative;
   width: 49%;
   padding: 0.2rem 0.05rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.wishList-card > .card-card > div{
+.wishList-card > .card-card > div {
   position: relative;
   width: 100%;
 }
@@ -29,27 +32,27 @@
   cursor: pointer;
 }
 
-.wishList-card > .card-card > div > a > img{
+.wishList-card > .card-card > div > a > img {
   width: 100%;
 }
 
-.wishList-card > .card-card > .card-detail{
-  margin-left: 0.2rem
+.wishList-card > .card-card > .card-detail {
+  margin-left: 0.2rem;
 }
 
-.wishList-card > .card-card > .card-detail > h4{
+.wishList-card > .card-card > .card-detail > h4 {
   font-size: 1rem;
   font-weight: 500;
   margin: 0rem 0rem;
 }
 
-.wishList-card > .card-card > .card-detail > h5{
+.wishList-card > .card-card > .card-detail > h5 {
   font-size: 0.9rem;
   font-weight: 550;
   margin: 0.2rem 0rem;
 }
 
-.wishList-card > .card-card > .card-detail > button{
+.wishList-card > .card-card > .card-detail > button {
   width: 95%;
   padding: 0.7rem 0rem;
   background-color: white;
@@ -61,19 +64,18 @@
 }
 
 @media screen and (min-width: 500px) {
-  
-  .wishList-length{
+  .wishList-length {
     margin-top: 4rem;
     margin-left: 3rem;
     font-weight: 700;
   }
 
-  .wishList-length > span{
+  .wishList-length > span {
     margin-left: 1rem;
     font-weight: 450;
   }
 
-  .wishList-card{
+  .wishList-card {
     display: flex;
     flex-wrap: wrap;
     gap: 5%;
@@ -81,7 +83,7 @@
     margin-bottom: 2rem;
     margin-top: 1.5rem;
   }
-  
+
   .wishList-card > .card-card {
     position: relative;
     width: 20%;
@@ -95,18 +97,18 @@
     padding-top: 0rem;
   }
 
-  .wishList-card > .card-card > .card-detail{
+  .wishList-card > .card-card > .card-detail {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
   }
 
-  .wishList-card > .card-card > .card-detail > h4{
+  .wishList-card > .card-card > .card-detail > h4 {
     font-size: 0.9rem;
     font-weight: 400;
   }
 
-  .wishList-card > .card-card > .card-detail > button{
+  .wishList-card > .card-card > .card-detail > button {
     width: 95%;
     padding: 0.4rem 0rem;
     background-color: white;
@@ -115,5 +117,4 @@
     font-size: 0.85rem;
     font-weight: 200;
   }
-
 }

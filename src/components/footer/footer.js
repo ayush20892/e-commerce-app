@@ -3,16 +3,20 @@ import { BsHeart, BsHeartFill, BsInboxes } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { useWishList } from "../../context/wishListContext.js";
+import { useAuth } from "../../context//authContext";
 
 export function Footer() {
-  const { stateWishList } = useWishList();
+  const { authState } = useAuth();
   return (
     <footer>
       <div className="footer-icons">
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <AiOutlineHome
-            style={{ fontSize: "1.6rem", marginTop: "0.5rem", cursor: "pointer" }}
+            style={{
+              fontSize: "1.6rem",
+              marginTop: "0.5rem",
+              cursor: "pointer",
+            }}
           />
           <h4>Home</h4>
         </Link>
@@ -25,7 +29,7 @@ export function Footer() {
         </Link>
 
         <Link to="/wishList" style={{ textDecoration: "none", color: "black" }}>
-          {stateWishList.itemsInWishList.length === 0 ? (
+          {authState.wishlist?.length === 0 ? (
             <BsHeart style={{ fontSize: "1.6rem", marginTop: "0.6rem" }} />
           ) : (
             <BsHeartFill
@@ -39,7 +43,7 @@ export function Footer() {
           <h4>WishList</h4>
         </Link>
 
-        <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/user" style={{ textDecoration: "none", color: "black" }}>
           <HiOutlineUserCircle
             style={{ fontSize: "1.6rem", marginTop: "0.7rem" }}
           />

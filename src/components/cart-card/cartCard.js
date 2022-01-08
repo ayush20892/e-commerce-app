@@ -1,50 +1,112 @@
 import "./cartCard.css";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { useCart } from "../../context/cartContext.js"
-import { useWishList } from "../../context/wishListContext.js"
-import { CheckItem, CategoryMatch, ProductTypeMatch } from "../../util.js"
-import { useNavigate } from "react-router-dom"
+import { CheckItem, CategoryMatch, ProductTypeMatch } from "../../util.js";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/authContext";
+import {
+  deleteFromCartHandler,
+  addToWishlistHandler,
+  increaseCartProductQuantity,
+  decreaseCartProductQuantity,
+} from "../../utils/productCalls";
 
 export function CartCard() {
-  const { stateCart, dispatchCart } = useCart();
-  const { stateWishList, dispatchWishList } = useWishList();
-  const navigate = useNavigate()
-  
-  return(
+  const { authState, authDispatch, setNetworkLoader } = useAuth();
+  const navigate = useNavigate();
+
+  return (
     <div className="card-vertical">
-      {stateCart.itemsInCart.map(item => (
-        <div key={item.id} className="card-ver-box">
-          <div key={item.id} className=" card-card-ver">
-            <img src={item.img} alt=".." onClick={() => navigate(`/${CategoryMatch(item.id)[0]}/${ProductTypeMatch(item.id)[0]}/${item.id}`)}/>
+      {authState.cart.map((item) => (
+        <div key={item.product._id} className="card-ver-box">
+          <div key={item.product._id} className=" card-card-ver">
+            <img
+              src={item.product.image}
+              alt=".."
+              onClick={() =>
+                navigate(
+                  `/${CategoryMatch(item.product.category)[0]}/${
+                    ProductTypeMatch(item.product.productType)[0]
+                  }/${item.product._id}`
+                )
+              }
+            />
             <div className="card-detail">
-              <h4>{item.name}</h4>
-              <h5>Rs {item.price}</h5>
+              <h4>{item.product.name}</h4>
+              <h5>Rs {item.product.price}</h5>
               <div className="qty">
-                <button onClick={() => dispatchCart({type:"DEC-QTY", payload: item })} disabled={!(item.quantity - 1)}>
-                  <AiOutlineMinus style={{margin: "0rem 1.5rem"}}/>
+                <button
+                  onClick={() =>
+                    decreaseCartProductQuantity(
+                      item.product._id,
+                      item.quantity - 1,
+                      authDispatch,
+                      navigate,
+                      setNetworkLoader
+                    )
+                  }
+                  disabled={!(item.quantity - 1)}
+                >
+                  <AiOutlineMinus style={{ margin: "0rem 1.5rem" }} />
                 </button>
 
                 <h5>{item.quantity}</h5>
 
-                <button onClick={() => dispatchCart({type:"INC-QTY", payload: item })}>
-                  <AiOutlinePlus style={{margin: "0rem 1.5rem"}}/>
+                <button
+                  onClick={() =>
+                    increaseCartProductQuantity(
+                      item.product._id,
+                      item.quantity + 1,
+                      authDispatch,
+                      navigate,
+                      setNetworkLoader
+                    )
+                  }
+                >
+                  <AiOutlinePlus style={{ margin: "0rem 1.5rem" }} />
                 </button>
-
               </div>
             </div>
           </div>
-          <hr/>
+          <hr />
           <div className="card-ver-btn">
+            <button
+              onClick={() =>
+                deleteFromCartHandler(
+                  item.product._id,
+                  authDispatch,
+                  navigate,
+                  setNetworkLoader
+                )
+              }
+              className="remove-btn"
+            >
+              Remove
+            </button>
 
-            <button onClick={() => dispatchCart({type:"DELETE-FROM-CART", payload: item })}className="remove-btn">Remove</button>
-
-            { CheckItem(stateWishList.itemsInWishList, item) ? 
+            {CheckItem(authState.cart, item.product_id) ? (
               <button className="move-to-wish-btn"> </button>
-              : 
-            <button onClick={() => {
-              dispatchWishList({type:"ADD-TO-WISHLIST", payload: item }); dispatchCart({type:"DELETE-FROM-CART", payload: item })
-              }}className="move-to-wish-btn">Move to wishList</button>
-            }
+            ) : (
+              <button
+                onClick={() => {
+                  deleteFromCartHandler(
+                    item.product._id,
+                    authDispatch,
+                    navigate,
+                    setNetworkLoader
+                  );
+                  addToWishlistHandler(
+                    item.product._id,
+                    authState,
+                    authDispatch,
+                    navigate,
+                    setNetworkLoader
+                  );
+                }}
+                className="move-to-wish-btn"
+              >
+                Move to wishList
+              </button>
+            )}
           </div>
         </div>
       ))}

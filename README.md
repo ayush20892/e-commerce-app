@@ -1,72 +1,72 @@
-# New Beginnings For Roc8, 17th OCT 2021
+<h1 align="center">
+           Unusual E-Commerce App
+</h1>
 
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+<h3 align="center">
+          Live Project : https://unusual-ecom.netlify.app/
+</h3>
+<br />
 
-### `npm start`
+## Tech Stack :  <img src="https://img.shields.io/badge/react%20-%23121011.svg?&style=for-the-badge&logo=react&logoColor=white"/> <img src="https://img.shields.io/badge/express%20-%23121011.svg?&style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB%20-%23121011.svg?&style=for-the-badge&logo=MongoDB&logoColor=white"/> 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend:** HTML,CSS,React 
+- **Backend:** Node, Express
+- **Dtabase:** MongoDB
+- **Version Control:** Git and GitHub
+- **Hosting:** Netlify
+- **Code Editor and tools**: VS Code
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ <br />
 
-### `npm test`
+   <p align="center">
+    ✨ Welcome to Unsual - Streaming Platform for Researchers ✨ <br />
+ 
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   
+## Table of Contents
 
-### `npm run build`
+    - Overview
+    - UI of Website
+    - Contribution Guideline
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ <br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Overview 🔨
 
-### `npm run eject`
+REStream is a full stack video streaming platform for researchers which is distraction-free and niche-specific app for budding researchers. Configured features such as follow, like videos, create and add to playlist, browse by categories, search history.
+ <br />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## UI of the Website
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| ![Screenshot from 2021-07-04 22-27-28](https://user-images.githubusercontent.com/50510726/148827964-9d9e0fa0-7254-48d3-a520-60831d6a556e.png)| ![Screenshot (62)](https://user-images.githubusercontent.com/50510726/148828326-aea5f38e-3522-446e-bbd5-63ab4a0f3501.png) |
+|-|-|
+| Login Page | Home Page |  
+| ![Screenshot (63)](https://user-images.githubusercontent.com/50510726/148828560-8a6c49b8-f10c-4371-b7f2-13be3bce2b7d.png)| ![Screenshot (64)](https://user-images.githubusercontent.com/50510726/148828851-10d7cb8a-0cc7-4fe4-832d-706d8fa0c02a.png) |
+| Categories Page | Channels Page| 
+<br/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Setup Steps
+  
+- Go to directory
+```
+$ cd REStream
+```
+- Install Dependencies
+```
+$ npm install
+```
+- Start LocalHost Server
+```
+$ npm run start
+```
+  
+  <br />
+  <br />

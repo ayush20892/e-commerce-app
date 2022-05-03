@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://unusual-ecom.netlify.app/" rel="noopener" target="_blank"><img src="/src/icon/Utility-UI-128.png" width="120" height="120" align="center"/></a>
+
+</p>
+
 <h1 align="center">
            Unusual E-Commerce App
 </h1>

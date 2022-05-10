@@ -59,9 +59,9 @@ $ npm run start
 ```
 
 ## Connect
--- **Twiiter** [ayush20892](https://twitter.com/ayush20892)
--- **LinkedIn** [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-0b82b6169/)
--- **Website** [ayush-sharma20.netlify.app/](https://ayush-sharma20.netlify.app/)
+- **Twiiter** [ayush20892](https://twitter.com/ayush20892)
+- **LinkedIn** [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-0b82b6169/)
+- **Website** [ayush-sharma20.netlify.app/](https://ayush-sharma20.netlify.app/)
 
   
   <br />

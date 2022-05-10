@@ -14,62 +14,41 @@
 
 <h3 align="center">
           Live Project : https://unusual-ecom.netlify.app/
+          Auth Repo : https://github.com/ayush20892/api-ecom-unusual
 </h3>
 <br />
 
 ## Overview:
 <p>✨ Unusual E-Com is a e-commerce app of clothing line for youngh folks ✨</p>
 
-## Preview :
+## Preview (Responsive) :
 ![](/src/icon/unusual-ecom.gif)
 
 ## Tech Stack :  <img src="https://img.shields.io/badge/react%20-%23121011.svg?&style=for-the-badge&logo=react&logoColor=white"/> <img src="https://img.shields.io/badge/express%20-%23121011.svg?&style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB%20-%23121011.svg?&style=for-the-badge&logo=MongoDB&logoColor=white"/> 
 
 - **Frontend:** HTML,CSS,React 
-- **Backend:** Node, Express
+- **Backend:** Node, Express, Mongoose ODM
 - **Dtabase:** MongoDB
+- **Authentication:** JWT, bcryptjs, cookies
 - **Version Control:** Git and GitHub
 - **Hosting:** Netlify
 - **Code Editor and tools**: VS Code
 
  <br />
-
-   <p align="center">
-    ✨ Welcome to Unsual - Streaming Platform for Researchers ✨ <br />
  
-</p>
+## Features: 
+- User Authentication with Forgot Password
+- Add Products to Cart & Wishlist
+- Sort & Filter of Product List
 
-   
-## Table of Contents
+## Future Improvements:
+- A checkout Page
+- Third party Authentication
+- Payment Gateway
+- Address Management & Tracking
+- Keyboard Accessibility
 
-    - Overview
-    - UI of Website
-    - Contribution Guideline
-
- <br />
-
-
-## Overview 🔨
-
-REStream is a full stack video streaming platform for researchers which is distraction-free and niche-specific app for budding researchers. Configured features such as follow, like videos, create and add to playlist, browse by categories, search history.
- <br />
-
-
-## UI of the Website
-
-| ![Screenshot from 2021-07-04 22-27-28](https://user-images.githubusercontent.com/50510726/148827964-9d9e0fa0-7254-48d3-a520-60831d6a556e.png)| ![Screenshot (62)](https://user-images.githubusercontent.com/50510726/148828326-aea5f38e-3522-446e-bbd5-63ab4a0f3501.png) |
-|-|-|
-| Login Page | Home Page |  
-| ![Screenshot (63)](https://user-images.githubusercontent.com/50510726/148828560-8a6c49b8-f10c-4371-b7f2-13be3bce2b7d.png)| ![Screenshot (64)](https://user-images.githubusercontent.com/50510726/148828851-10d7cb8a-0cc7-4fe4-832d-706d8fa0c02a.png) |
-| Categories Page | Channels Page| 
-<br/>
-
-## Setup Steps
-  
-- Go to directory
-```
-$ cd REStream
-```
+## Intallation Steps
 - Install Dependencies
 ```
 $ npm install
@@ -78,6 +57,12 @@ $ npm install
 ```
 $ npm run start
 ```
+
+## Connect
+-- **Twiiter** [ayush20892](https://twitter.com/ayush20892)
+-- **LinkedIn** [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-0b82b6169/)
+-- **Website** [ayush-sharma20.netlify.app/](https://ayush-sharma20.netlify.app/)
+
   
   <br />
   <br />

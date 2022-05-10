@@ -17,6 +17,11 @@
 </h3>
 <br />
 
+## Overview:
+<p>✨ Unusual E-Com is a e-commerce app of clothing line for youngh folks ✨</p>
+
+## Preview :
+
 ## Tech Stack :  <img src="https://img.shields.io/badge/react%20-%23121011.svg?&style=for-the-badge&logo=react&logoColor=white"/> <img src="https://img.shields.io/badge/express%20-%23121011.svg?&style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB%20-%23121011.svg?&style=for-the-badge&logo=MongoDB&logoColor=white"/> 
 
 - **Frontend:** HTML,CSS,React 

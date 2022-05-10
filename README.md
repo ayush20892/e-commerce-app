@@ -13,9 +13,13 @@
 </div>
 
 <h3 align="center">
-          Live Project : https://unusual-ecom.netlify.app/
-          Auth Repo : https://github.com/ayush20892/api-ecom-unusual
+  Live Project : https://unusual-ecom.netlify.app/
 </h3>
+
+<h3 align="center">
+  Auth Repo : https://github.com/ayush20892/api-ecom-unusual
+ </h3>
+ 
 <br />
 
 ## Overview:

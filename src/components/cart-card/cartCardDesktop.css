@@ -1,6 +1,5 @@
-@media screen and (min-width: 500px) {
-
-  .cart-box-desktop{
+@media screen and (min-width: 720px) {
+  .cart-box-desktop {
     display: flex;
     justify-content: flex-start;
     gap: -3rem;
@@ -9,28 +8,26 @@
     padding-right: 2%;
   }
 
-
-  .cart-box-desktop > .card-vertical{
+  .cart-box-desktop > .card-vertical {
     display: flex;
     flex-flow: column nowrap;
     width: 65%;
     margin: 0rem 0rem;
   }
 
-  .cart-box-desktop > .card-vertical > .bag-item{
+  .cart-box-desktop > .card-vertical > .bag-item {
     margin-left: 2rem;
     /* margin-right: 6rem; */
     margin-bottom: 1rem;
     font-weight: 700;
   }
 
-
-  .cart-box-desktop > .card-vertical > .bag-item > span{
+  .cart-box-desktop > .card-vertical > .bag-item > span {
     font-weight: 500;
     margin-left: 0.3rem;
   }
 
-  .card-ver-box{
+  .card-ver-box {
     border: 0.1px solid lightgray;
     border-radius: 0.1rem;
     margin: 0.5% 1%;
@@ -38,79 +35,69 @@
     width: 85%;
     /* padding-bottom: 3%; */
   }
-  
-  .card-vertical > .card-ver-box > .card-card-ver{
+
+  .card-vertical > .card-ver-box > .card-card-ver {
     display: flex;
     gap: 3%;
     padding: 2% 0%;
     border-bottom: 0.1px solid lightgray;
   }
-  
-  .card-vertical > .card-ver-box > 
-  .card-card-ver >  img{
-    max-width:  25%;
+
+  .card-vertical > .card-ver-box > .card-card-ver > img {
+    max-width: 25%;
     margin-left: 2%;
     cursor: pointer;
   }
-  
-  .card-vertical > .card-ver-box >
-  .card-card-ver > .card-detail > h4{
+
+  .card-vertical > .card-ver-box > .card-card-ver > .card-detail > h4 {
     margin: 0rem 0rem;
     margin-top: 0.8rem;
     font-size: 0.8rem;
     font-weight: 400;
   }
-  
-  .card-vertical > .card-ver-box >
-  .card-card-ver > .card-detail > h5{
+
+  .card-vertical > .card-ver-box > .card-card-ver > .card-detail > h5 {
     margin: 0rem 0rem;
     margin-top: 0.3rem;
     font-size: 0.9rem;
   }
 
-  .card-vertical > .card-ver-box >
-  .card-card-ver > .card-detail > h5 > strike{
+  .card-vertical > .card-ver-box > .card-card-ver > .card-detail > h5 > strike {
     margin-left: 0.5rem;
     font-size: 0.8rem;
     font-weight: 400;
   }
-  
-  .card-card-ver > .card-detail > .qty{
+
+  .card-card-ver > .card-detail > .qty {
     margin-top: 20%;
     display: flex;
   }
-  
-  .card-card-ver > .card-detail > .qty > button{
+
+  .card-card-ver > .card-detail > .qty > button {
     background-color: white;
     border: none;
     cursor: pointer;
-    
   }
-  
-  .card-card-ver > .card-detail > .qty > button:focus{
+
+  .card-card-ver > .card-detail > .qty > button:focus {
     border: none;
     outline: none;
   }
-  
-  .card-card-ver > .card-detail > .qty > h5{
+
+  .card-card-ver > .card-detail > .qty > h5 {
     margin: 0rem 0rem;
     font-size: 1.2rem;
     font-weight: 500;
   }
-  
-  .card-ver-box > hr{
+
+  .card-ver-box > hr {
     margin-top: 0.3rem;
     margin-bottom: 0rem;
     padding: 0rem 0rem;
     border: 0.1px solid lightgray;
   }
-  
-  
-  .card-ver-box > .card-ver-btn {
-    /* padding: 1rem 0rem; */
-  }
-  
-  .card-ver-box > .card-ver-btn > .remove-btn{
+
+  .card-ver-box > .card-ver-btn > .remove-btn {
     width: 30%;
     padding: 2% 0%;
     background-color: white;
@@ -118,8 +105,8 @@
     border-right: 0.3px solid lightgray;
     cursor: pointer;
   }
-  
-  .card-ver-box > .card-ver-btn > .move-to-wish-btn{
+
+  .card-ver-box > .card-ver-btn > .move-to-wish-btn {
     width: 70%;
     padding: 2% 0%;
     background-color: white;
@@ -127,46 +114,45 @@
     cursor: pointer;
   }
 
-  .card-ver-box > .card-ver-btn > button:focus{
+  .card-ver-box > .card-ver-btn > button:focus {
     border: none;
     outline: none;
   }
-  
 
-  .checkout-box{
+  .checkout-box {
     border: 0.5px solid lightgrey;
     margin-top: 2.5rem;
-    height: 14.5rem;
+    height: 14.8rem;
     width: 27%;
     font-size: 0.8rem;
   }
 
-  .checkout-box-condition{
+  .checkout-box-condition {
     display: none;
   }
 
-  .checkout-box > .heading{
+  .checkout-box > .heading {
     padding: 0.3rem 1rem;
     font-weight: 570;
     background-color: lightgrey;
   }
 
-  .checkout-box > .payment-box{
+  .checkout-box > .payment-box {
     padding: 0rem 0.5rem;
     font-size: 0.7rem;
   }
 
-  .checkout-box > .payment-box > .payment-box-inner{
+  .checkout-box > .payment-box > .payment-box-inner {
     display: flex;
     justify-content: space-between;
   }
 
-  .checkout-box > .payment-box > .payment-box-inner > p{
+  .checkout-box > .payment-box > .payment-box-inner > p {
     margin: 0;
     margin-top: 0.5rem;
   }
 
-  .checkout-box > .payment-box > .saving-label{
+  .checkout-box > .payment-box > .saving-label {
     border-radius: 14px;
     width: 95%;
     padding: 0.2rem 0.5rem;
@@ -174,16 +160,15 @@
     text-align: left;
   }
 
-  .checkout-box > .payment-box > .saving-label-condition{
+  .checkout-box > .payment-box > .saving-label-condition {
     display: none;
   }
 
-  .checkout-box > .payment-box > .saving-label > p{
+  .checkout-box > .payment-box > .saving-label > p {
     margin: 0;
   }
 
-
-  .checkout-box > .checkout-btn{
+  .checkout-box > .checkout-btn {
     border-top: 0.3px solid lightgray;
     margin-top: 2rem;
     display: flex;
@@ -193,14 +178,14 @@
     padding: 0.3rem 0rem;
   }
 
-  .checkout-box > .checkout-btn > h4{
+  .checkout-box > .checkout-btn > h4 {
     margin: 0;
     margin-left: 0.5rem;
     font-size: 0.7rem;
     font-weight: 600;
   }
 
-  .checkout-box > .checkout-btn > button{
+  .checkout-box > .checkout-btn > button {
     padding: 3% 0.4rem;
     margin: 0rem 0.2rem;
     width: 70%;
@@ -211,5 +196,204 @@
     color: white;
     cursor: pointer;
   }
+}
 
+@media screen and (min-width: 500px) and (max-width: 720px) {
+  .cart-box-desktop {
+    display: flex;
+    justify-content: flex-start;
+    gap: -3rem;
+    margin: 4rem 0;
+    padding: 0 5%;
+    padding-right: 2%;
+  }
+
+  .cart-box-desktop > .card-vertical {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 65%;
+    margin: 0rem 0rem;
+  }
+
+  .cart-box-desktop > .card-vertical > .bag-item {
+    margin-left: 2rem;
+    /* margin-right: 6rem; */
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cart-box-desktop > .card-vertical > .bag-item > span {
+    font-weight: 500;
+    margin-left: 0.3rem;
+  }
+
+  .card-ver-box {
+    border: 0.1px solid lightgray;
+    border-radius: 0.1rem;
+    margin: 0.5% 1%;
+    margin-left: 5%;
+    width: 85%;
+    /* padding-bottom: 3%; */
+  }
+
+  .card-vertical > .card-ver-box > .card-card-ver {
+    display: flex;
+    gap: 3%;
+    padding: 2% 0%;
+    border-bottom: 0.1px solid lightgray;
+  }
+
+  .card-vertical > .card-ver-box > .card-card-ver > img {
+    max-width: 25%;
+    margin-left: 2%;
+    cursor: pointer;
+  }
+
+  .card-vertical > .card-ver-box > .card-card-ver > .card-detail > h4 {
+    margin: 0rem 0rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .card-vertical > .card-ver-box > .card-card-ver > .card-detail > h5 {
+    margin: 0rem 0rem;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .card-vertical > .card-ver-box > .card-card-ver > .card-detail > h5 > strike {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .card-card-ver > .card-detail > .qty {
+    margin-top: 20%;
+    display: flex;
+  }
+
+  .card-card-ver > .card-detail > .qty > button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card-card-ver > .card-detail > .qty > button:focus {
+    border: none;
+    outline: none;
+  }
+
+  .card-card-ver > .card-detail > .qty > h5 {
+    margin: 0rem 0rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .card-ver-box > hr {
+    margin-top: 0.3rem;
+    margin-bottom: 0rem;
+    padding: 0rem 0rem;
+    border: 0.1px solid lightgray;
+  }
+
+  .card-ver-box > .card-ver-btn > .remove-btn {
+    width: 30%;
+    padding: 2% 0%;
+    background-color: white;
+    border: none;
+    border-right: 0.3px solid lightgray;
+    cursor: pointer;
+  }
+
+  .card-ver-box > .card-ver-btn > .move-to-wish-btn {
+    width: 70%;
+    padding: 2% 0%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card-ver-box > .card-ver-btn > button:focus {
+    border: none;
+    outline: none;
+  }
+
+  .checkout-box {
+    border: 0.5px solid lightgrey;
+    margin-top: 2.5rem;
+    height: 15.5rem;
+    width: 32%;
+    font-size: 0.8rem;
+  }
+
+  .checkout-box-condition {
+    display: none;
+  }
+
+  .checkout-box > .heading {
+    padding: 0.3rem 1rem;
+    font-weight: 570;
+    background-color: lightgrey;
+  }
+
+  .checkout-box > .payment-box {
+    padding: 0rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .checkout-box > .payment-box > .payment-box-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkout-box > .payment-box > .payment-box-inner > p {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  .checkout-box > .payment-box > .saving-label {
+    border-radius: 14px;
+    width: 95%;
+    padding: 0.2rem 0.5rem;
+    margin-top: 1.5rem;
+    text-align: left;
+  }
+
+  .checkout-box > .payment-box > .saving-label-condition {
+    display: none;
+  }
+
+  .checkout-box > .payment-box > .saving-label > p {
+    margin: 0;
+  }
+
+  .checkout-box > .checkout-btn {
+    border-top: 0.3px solid lightgray;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3rem 0rem;
+  }
+
+  .checkout-box > .checkout-btn > h4 {
+    margin: 0;
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .checkout-box > .checkout-btn > button {
+    padding: 3% 0.4rem;
+    margin: 0rem 0.2rem;
+    width: 70%;
+    font-weight: 700;
+    background-color: #4169e1;
+    border: 0.3px solid #4169e1;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+  }
 }

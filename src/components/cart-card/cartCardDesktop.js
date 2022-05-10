@@ -1,101 +1,189 @@
 import "./cartCardDesktop.css";
+import { useEffect, useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { useCart } from "../../context/cartContext.js"
-import { useWishList } from "../../context/wishListContext.js"
-import { CheckItem, CategoryMatch, ProductTypeMatch  } from "../../util.js"
-import { useNavigate } from "react-router-dom"
-
+import { CheckItem, CategoryMatch, ProductTypeMatch } from "../../util.js";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/authContext";
+import {
+  deleteFromCartHandler,
+  addToWishlistHandler,
+  increaseCartProductQuantity,
+  decreaseCartProductQuantity,
+} from "../../utils/productCalls";
 
 export function CartCardDesktop() {
-  const { stateCart, dispatchCart } = useCart();
-  const { stateWishList, dispatchWishList } = useWishList();
-  const navigate = useNavigate()
+  const { authState, authDispatch, setNetworkLoader } = useAuth();
+  const navigate = useNavigate();
 
+  const [bagValue, setBagValue] = useState(0);
+  useEffect(() => {
+    setBagValue(
+      authState.cart.reduce(
+        (acc, item) => acc + item.product.price * item.quantity,
+        0
+      )
+    );
+  }, [authState.cart]);
 
   const cartItems = () => {
-    if(stateCart.itemsInCart.length < 2)
-      return <span>{stateCart.itemsInCart.length} item</span>
-    else 
-      return <span>{stateCart.itemsInCart.length} item(s)</span>
-  }
-  
-  return(
+    if (authState.cart.length < 2)
+      return <span>{authState.cart.length} item</span>;
+    else return <span>{authState.cart.length} item(s)</span>;
+  };
+
+  return (
     <div className="cart-box-desktop">
-      
       <div className="card-vertical">
-      <div className="bag-item">My Bag  {cartItems()} </div>
-        {stateCart.itemsInCart.map(item => (
-          <div className="card-ver-box">
-            <div key={item.id} className=" card-card-ver">
-              
-              <img src={item.img} alt=".." onClick={() => navigate(`/${CategoryMatch(item.id)[0]}/${ProductTypeMatch(item.id)[0]}/${item.id}`)}/>
-              
+        <div className="bag-item">My Bag {cartItems()} </div>
+        {authState.cart.map((item) => (
+          <div key={item.product._id} className="card-ver-box">
+            <div className=" card-card-ver">
+              <img
+                src={item.product.image}
+                alt=".."
+                onClick={() =>
+                  navigate(
+                    `/${CategoryMatch(item.product.category)[0]}/${
+                      ProductTypeMatch(item.product.productType)[0]
+                    }/${item.product._id}`
+                  )
+                }
+              />
+
               <div className="card-detail">
-                <h4>{item.name}</h4>
-                <h5>₹ {item.price} <strike>{item.beforeDiscount}</strike></h5>
-                
+                <h4>{item.product.name}</h4>
+                <h5>
+                  ₹ {item.product.price}{" "}
+                  <strike>{item.product.beforeDiscount}</strike>
+                </h5>
+
                 <div className="qty">
-                  <button onClick={() => dispatchCart({type:"DEC-QTY", payload: item })} disabled={!(item.quantity - 1)}>
-                    <AiOutlineMinus style={{margin: "0rem 1.5rem", fontSize: "1.4rem"}}/>
+                  <button
+                    onClick={() =>
+                      decreaseCartProductQuantity(
+                        item.product._id,
+                        item.quantity - 1,
+                        authDispatch,
+                        navigate,
+                        setNetworkLoader
+                      )
+                    }
+                    disabled={!(item.quantity - 1)}
+                  >
+                    <AiOutlineMinus
+                      style={{ margin: "0rem 1.5rem", fontSize: "1.4rem" }}
+                    />
                   </button>
 
                   <h5>{item.quantity}</h5>
 
-                  <button onClick={() => dispatchCart({type:"INC-QTY", payload: item })}>
-                    <AiOutlinePlus style={{margin: "0rem 1.5rem", fontSize: "1.4rem"}}/>
+                  <button
+                    onClick={() =>
+                      increaseCartProductQuantity(
+                        item.product._id,
+                        item.quantity + 1,
+                        authDispatch,
+                        navigate,
+                        setNetworkLoader
+                      )
+                    }
+                  >
+                    <AiOutlinePlus
+                      style={{ margin: "0rem 1.5rem", fontSize: "1.4rem" }}
+                    />
                   </button>
-
                 </div>
               </div>
             </div>
-            
+
             <div className="card-ver-btn">
+              <button
+                onClick={() =>
+                  deleteFromCartHandler(
+                    item.product._id,
+                    authDispatch,
+                    navigate,
+                    setNetworkLoader
+                  )
+                }
+                className="remove-btn"
+              >
+                Remove
+              </button>
 
-              <button onClick={() => dispatchCart({type:"DELETE-FROM-CART", payload: item })}className="remove-btn">Remove</button>
-
-              { CheckItem(stateWishList.itemsInWishList, item) ? 
+              {CheckItem(authState.wishlist, item.product._id) ? (
                 <button className="move-to-wish-btn"> </button>
-                : 
-              <button onClick={() => {
-                dispatchWishList({type:"ADD-TO-WISHLIST", payload: item }); dispatchCart({type:"DELETE-FROM-CART", payload: item })
-                }}className="move-to-wish-btn">Move to wishList</button>
-              }
+              ) : (
+                <button
+                  onClick={() => {
+                    deleteFromCartHandler(
+                      item.product._id,
+                      authDispatch,
+                      navigate,
+                      setNetworkLoader
+                    );
+                    addToWishlistHandler(
+                      item.product._id,
+                      authState,
+                      authDispatch,
+                      navigate,
+                      setNetworkLoader
+                    );
+                  }}
+                  className="move-to-wish-btn"
+                >
+                  Move to wishList
+                </button>
+              )}
             </div>
           </div>
         ))}
       </div>
 
-      <div className={stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 0) > 0 ? "checkout-box" : "checkout-box-condition" }>
-        <div className="heading">
-          Price Summary
-        </div>
+      <div className={bagValue > 0 ? "checkout-box" : "checkout-box-condition"}>
+        <div className="heading">Price Summary</div>
         <div className="payment-box">
           <div className="payment-box-inner">
-              <p>Total MRP (Incl. of taxes)</p>
-              <p><span style={{fontWeight: "bold"}}>₹</span> {stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 400)}</p>
+            <p>Total MRP (Incl. of taxes)</p>
+            <p>
+              <span style={{ fontWeight: "bold" }}>₹</span>{" "}
+              {authState.cart.reduce(
+                (acc, item) => acc + item.product.price * item.quantity,
+                400
+              )}
+            </p>
           </div>
           <div className="payment-box-inner">
-              <p>Delivery Fee</p>
-              <p style={{color: "rgb(29, 136, 2)"}}>FREE</p>
+            <p>Delivery Fee</p>
+            <p style={{ color: "rgb(29, 136, 2)" }}>FREE</p>
           </div>
           <div className="payment-box-inner">
-              <p>Bag Discount</p>
-              <p>- <span style={{fontWeight: "bold"}}>₹</span> 400</p>
+            <p>Bag Discount</p>
+            <p>
+              - <span style={{ fontWeight: "bold" }}>₹</span> 400
+            </p>
           </div>
-          <div className="payment-box-inner" style={{fontWeight: "590"}}>
-              <p>Subtotal</p>
-              <p><span style={{fontWeight: "bold"}}>₹</span> {stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 0)}</p>
-          </div>
-        
-          <div className={stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 0) > 0 ? "saving-label" : "saving-label-condition" } style={{backgroundColor: "rgba(29, 136, 2, 0.1)", color: "rgb(29, 136, 2)"}}>
-             <p>You are saving ₹ 400 on this order</p> 
+          <div className="payment-box-inner" style={{ fontWeight: "590" }}>
+            <p>Subtotal</p>
+            <p>
+              <span style={{ fontWeight: "bold" }}>₹</span> {bagValue}
+            </p>
           </div>
 
+          <div
+            className={bagValue > 0 ? "saving-label" : "saving-label-condition"}
+            style={{
+              backgroundColor: "rgba(29, 136, 2, 0.1)",
+              color: "rgb(29, 136, 2)",
+            }}
+          >
+            <p>You are saving ₹ 400 on this order</p>
+          </div>
         </div>
 
         <div className="checkout-btn">
-            <h4>Rs {stateCart.itemsInCart.reduce((acc,item) => acc+(item.price*item.quantity), 0)}</h4>
-            <button>CHECKOUT</button>
+          <h4>Rs {bagValue}</h4>
+          <button>CHECKOUT</button>
         </div>
       </div>
     </div>

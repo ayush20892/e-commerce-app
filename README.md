@@ -18,7 +18,7 @@
 <br />
 
 ## Overview:
-<p>E-Commerce Site</p>
+<p>✨ Unusual E-Com is a e-commerce app of clothing line for youngh folks ✨</p>
 
 ## Preview :
 

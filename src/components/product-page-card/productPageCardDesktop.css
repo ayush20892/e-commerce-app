@@ -25,7 +25,7 @@
   }
   
   .product-page-desktop > div > img{
-    width: 88%;
+    width: 75%;
     border-radius: 1rem;
     box-shadow: 5px 10px 18px #888888;
   }
@@ -33,7 +33,7 @@
   .product-page-desktop > div > span {
     position: absolute;
     top: 1rem;
-    right: 15%;
+    right: 10rem;
     font-size: 2rem;
     border: none;
     border-radius: 20%;

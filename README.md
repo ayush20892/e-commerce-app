@@ -17,7 +17,7 @@
 </h3>
 
 <h3 align="center">
-  Auth Repo : https://github.com/ayush20892/api-ecom-unusual
+  Backend Repo : https://github.com/ayush20892/api-ecom-unusual
  </h3>
  
 <br />
@@ -32,7 +32,7 @@
 
 - **Frontend:** HTML,CSS,React 
 - **Backend:** Node, Express, Mongoose ODM
-- **Dtabase:** MongoDB
+- **Database:** MongoDB
 - **Authentication:** JWT, bcryptjs, cookies
 - **Version Control:** Git and GitHub
 - **Hosting:** Netlify
@@ -61,6 +61,9 @@ $ npm install
 ```
 $ npm run start
 ```
+
+## Note
+- Add .env file with suitable variables.
 
 ## Connect
 - **Twiiter** [ayush20892](https://twitter.com/ayush20892)

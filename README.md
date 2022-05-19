@@ -23,7 +23,7 @@
 <br />
 
 ## Overview:
-<p>✨ Unusual E-Com is a e-commerce app of clothing line for youngh folks ✨</p>
+<p>✨ Unusual E-Com is a e-commerce app of clothing line for young folks ✨</p>
 
 ## Preview (Responsive) :
 ![](/src/icon/unusual-ecom.gif)

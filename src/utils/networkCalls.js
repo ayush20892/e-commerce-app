@@ -102,9 +102,10 @@ export const passwordReset = async (password, confirmPassword) => {
 
 export const userDashboard = async (email, password) => {
   try {
-    return await axios.get(`${REACT_APP_BACKEND_URL}/userDashboard`, {
+    const { data } = await axios.get(`${REACT_APP_BACKEND_URL}/userDashboard`, {
       withCredentials: true,
     });
+    return data;
   } catch (err) {
     console.log(err);
   }
@@ -227,6 +228,18 @@ export const deleteFromCart = async (productId) => {
   }
 };
 
+export const emptyCart = async () => {
+  try {
+    const { data } = await axios({
+      method: "delete",
+      url: `${REACT_APP_BACKEND_URL}/user/emptycart`,
+    });
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getASingleProduct = async (productId) => {
   try {
     const { data } = await axios.get(
@@ -277,6 +290,121 @@ export const updateUserPassowrd = async (
         oldPassword,
         password,
         confirmPassword,
+      },
+    });
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Address
+export const addAddress = async (
+  name,
+  addressLine,
+  city,
+  state,
+  country,
+  pinCode,
+  mobileNo
+) => {
+  try {
+    const { data } = await axios({
+      method: "post",
+      url: `${REACT_APP_BACKEND_URL}/user/address`,
+      data: {
+        name,
+        addressLine,
+        city,
+        state,
+        country,
+        pinCode,
+        mobileNo,
+      },
+    });
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const editAddress = async ({
+  addressId,
+  name,
+  addressLine,
+  city,
+  state,
+  country,
+  pinCode,
+  mobileNo,
+}) => {
+  try {
+    const { data } = await axios({
+      method: "post",
+      url: `${REACT_APP_BACKEND_URL}/user/address/${addressId}`,
+      data: {
+        name,
+        addressLine,
+        city,
+        state,
+        country,
+        pinCode,
+        mobileNo,
+      },
+    });
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const deleteAddress = async (addressId) => {
+  try {
+    const { data } = await axios({
+      method: "delete",
+      url: `${REACT_APP_BACKEND_URL}/user/address/${addressId}`,
+    });
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Order
+export const createOrder = async (
+  addressId,
+  products,
+  paymentInfoId,
+  totalAmount,
+  discountAmount,
+  orderAmount
+) => {
+  try {
+    const { data } = await axios({
+      method: "post",
+      url: `${REACT_APP_BACKEND_URL}/user/order`,
+      data: {
+        addressId,
+        products,
+        paymentInfoId,
+        totalAmount,
+        discountAmount,
+        orderAmount,
+      },
+    });
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const cancelOrder = async (orderId) => {
+  try {
+    const { data } = await axios({
+      method: "delete",
+      url: `${REACT_APP_BACKEND_URL}/user/order`,
+      data: {
+        orderId,
       },
     });
     return data;

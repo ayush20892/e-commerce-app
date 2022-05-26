@@ -1,11 +1,9 @@
 import { Navigate, useLocation } from "react-router-dom";
 
-import { useAuth } from "../context/authContext";
-
 export function PrivateRoute({ children }) {
-  const { authState } = useAuth();
+  const session = JSON.parse(localStorage.getItem("session"));
   let location = useLocation();
-  return authState.userId ? (
+  return session?.userId && session.userId !== null ? (
     children
   ) : (
     <Navigate state={{ from: location }} replace to="/user/login" />

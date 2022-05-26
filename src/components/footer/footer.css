@@ -50,10 +50,10 @@ footer > .footer-icons{
   font-size: 1rem;
   width: 70%;
   padding: 1rem 0rem;
-  background-color: #4169e1;
-  border: 0.3px solid #4169e1;
+  background-color: lightsalmon;
+  color: beige;
+  border: none;
   border-radius: 0.5rem;
-  color: white;
 }
 
 /* Product Item */

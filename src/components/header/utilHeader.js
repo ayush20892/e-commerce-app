@@ -46,7 +46,6 @@ export function UtilHeader({ headerName }) {
           )}
         </div>
       </nav>
-      <hr />
     </>
   );
 }

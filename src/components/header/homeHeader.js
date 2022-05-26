@@ -33,12 +33,12 @@ export function HomeHeader() {
             >
               WOMEN
             </h5>
-            <h5
+            {/* <h5
               onClick={() => navigate("/categories/gadget")}
               className="nav-item"
             >
               GADGETS
-            </h5>
+            </h5> */}
           </div>
         </div>
         <div className="side-icon">

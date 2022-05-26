@@ -10,9 +10,16 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   const [authState, authDispatch] = useReducer(authReducer, {
     userId: "",
+    userName: "",
+    email: "",
     cart: [],
     wishlist: [],
     productList: [],
+    addresses: [],
+    orders: [],
+    showAddressModal: false,
+    addressToEdit: "",
+    userProfileTab: "",
   });
 
   const [networkLoader, setNetworkLoader] = useState(false);

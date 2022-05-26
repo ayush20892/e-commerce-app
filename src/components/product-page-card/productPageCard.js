@@ -18,7 +18,8 @@ export function ProductPageCard({ product }) {
         <h5>Rs {product.price}</h5>
       </div>
       <hr />
-      <h4 style={{ marginLeft: "1rem", marginBottom: "1rem" }}>Select Size</h4>
+
+      {/* <h4 style={{ marginLeft: "1rem", marginBottom: "1rem" }}>Select Size</h4>
       <div className="size-chart">
         <div>S</div>
         <div>M</div>
@@ -26,7 +27,8 @@ export function ProductPageCard({ product }) {
         <div>XL</div>
         <div>2XL</div>
         <div>3XL</div>
-      </div>
+      </div> */}
+
       <hr className="divide-hr" />
       <div className="product-extra-detail">
         <div className="product-type">

@@ -49,7 +49,7 @@ export function ProductPageCardDesktop({ product }) {
             <strike>{product.beforeDiscount}</strike>
           </div>
 
-          <h4 style={{ marginBottom: "1rem" }}>Select Size</h4>
+          {/* <h4 style={{ marginBottom: "1rem" }}>Select Size</h4>
           <div className="size-chart">
             <div>S</div>
             <div>M</div>
@@ -57,7 +57,7 @@ export function ProductPageCardDesktop({ product }) {
             <div>XL</div>
             <div>2XL</div>
             <div>3XL</div>
-          </div>
+          </div> */}
 
           <div className="product-btn">
             {CheckItem(authState.wishlist, product._id) ? (

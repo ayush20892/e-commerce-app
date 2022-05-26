@@ -24,7 +24,7 @@ export function Cart() {
       {isMobile && <CartCardDesktop />}
       {!isMobile && <CartCard />}
 
-      <CheckOutFooter />
+      <CheckOutFooter type="cart" />
     </div>
   );
 }

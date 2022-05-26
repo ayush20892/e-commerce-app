@@ -43,9 +43,9 @@ export const CategoryData = [
     ],
   },
 
-  {
-    categoryName: "gadget",
-    categoryImg: gadgetCategory,
-    productType: [],
-  },
+  // {
+  //   categoryName: "gadget",
+  //   categoryImg: gadgetCategory,
+  //   productType: [],
+  // },
 ];

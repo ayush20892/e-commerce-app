@@ -13,17 +13,15 @@ import { UserPage } from "./pages/userPage.js";
 import { UpdateUserPage } from "./pages/userUpdatePage";
 import { Loader } from "./components/loader/loader";
 import { useAuth } from "./context/authContext";
-import {
-  getAllProducts,
-  getAllCartItems,
-  getAllWishlistItems,
-} from "./utils/networkCalls";
+import { getAllProducts, userDashboard } from "./utils/networkCalls";
 import { ProductProvider } from "./context/productContext";
+import Checkout from "./pages/checkout";
+import AddressModal from "./components/addressModal/addressModal";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const session = JSON.parse(localStorage.getItem("session"));
-  const { authDispatch } = useAuth();
+  const { authState, authDispatch } = useAuth();
   const navigate = useNavigate();
 
   async function loadInitialData() {
@@ -32,20 +30,14 @@ function App() {
       authDispatch({ type: "LOAD_PRODUCTS", payload: data.productResult });
 
     if (session?.userId) {
-      const cartItems = await getAllCartItems();
-      const wishListItems = await getAllWishlistItems();
+      const userData = await userDashboard();
 
-      if (!cartItems.success) {
+      if (!userData.success) {
         authDispatch({ type: "END_SESSION" });
         navigate("/user/login", { replace: "true" });
       }
 
-      const payload = {
-        userId: session?.userId,
-        cart: cartItems.cart,
-        wishlist: wishListItems.wishlist,
-      };
-      authDispatch({ type: "START_SESSION", payload });
+      authDispatch({ type: "START_SESSION", payload: userData.user });
     }
     setIsLoading(false);
   }
@@ -64,6 +56,7 @@ function App() {
 
   return (
     <div className="App">
+      {authState.showAddressModal && <AddressModal />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -93,6 +86,14 @@ function App() {
           element={
             <PrivateRoute>
               <WishList />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <Checkout />
             </PrivateRoute>
           }
         />

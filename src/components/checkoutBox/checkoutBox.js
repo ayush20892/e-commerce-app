@@ -103,7 +103,7 @@ export function CheckoutBox() {
             </h4>
             <h4>
               <span>Discount Amount</span>
-              <span>₹ {Math.round((orderValue * 10) / 100)}</span>
+              <span>- ₹ {Math.round((orderValue * 10) / 100)}</span>
             </h4>
             <h4>
               <span>Delivery Charge</span>
@@ -134,13 +134,13 @@ export function CheckoutBox() {
           {error !== "" && <h4 className="error-message">{error}</h4>}
           <button onClick={checkAddress}>Procced To Payment</button>
         </div>
-        <footer>
-          <div className="checkout-items">
-            <h4>Rs {orderTotalValue}</h4>
-            <button onClick={checkAddress}>PAYMENT</button>
-          </div>
-        </footer>
       </div>
+      <footer>
+        <div className="checkout-items">
+          <h4>Rs {orderTotalValue}</h4>
+          <button onClick={checkAddress}>PAYMENT</button>
+        </div>
+      </footer>
     </div>
   );
 }

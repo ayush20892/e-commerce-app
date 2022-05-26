@@ -24,6 +24,16 @@ function AddressModal() {
     mobileNo,
   };
 
+  function dummyAddress() {
+    setName("Ravi Sharma");
+    setAddressLine("43/A Greenfield Street");
+    setCity("Pune");
+    setState("Maharastra");
+    setCountry("India");
+    setPinCode("311105");
+    setMobileNo("9567329473");
+  }
+
   useEffect(() => {
     if (authState.addressToEdit !== "") {
       const address = authState.addresses.find(
@@ -37,7 +47,7 @@ function AddressModal() {
       setPinCode(address.pinCode);
       setMobileNo(address.mobileNo);
     }
-  }, [authState.addressToEdit]);
+  }, []);
 
   async function addAddressHandler() {
     authDispatch({
@@ -150,11 +160,11 @@ function AddressModal() {
           >
             Save
           </button>
-          <button>Dummy Address</button>
+          <button onClick={dummyAddress}>Dummy Address</button>
           <button
             onClick={() => {
               authDispatch({ type: "TOGGLE_ADDRESS_MODAL", payload: false });
-              authDispatch({ tyep: "ADDRESS_TO_EDIT", payload: "" });
+              authDispatch({ type: "ADDRESS_TO_EDIT", payload: "" });
             }}
           >
             Cancel

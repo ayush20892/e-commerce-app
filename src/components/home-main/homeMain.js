@@ -63,26 +63,33 @@ export function HomeMain() {
           <h5>Women</h5>
         </div>
 
-        <div
+        {/* <div
           onClick={() => navigate("/categories/gadget")}
           className="category"
         >
           <img src={gadgetCategory} alt=".." />
           <h5>Gadget</h5>
-        </div>
+        </div> */}
       </div>
 
       <div className="hoarding">
         <img
-          src={ecomHoarding}
+          src="https://res.cloudinary.com/drmqhvz5l/image/upload/v1653380032/GettyImages_1043605040.0_tdksjt.jpg"
           alt=".."
           onClick={() => navigate("/women/kurti")}
         />
 
-        <div className="hoardingText" onClick={() => navigate("/women/kurti")}>
-          <span style={{ fontSize: "1.5rem" }}>FLAT 500 OFF</span>
+        <div className="hoardingText">
+          <span >
+            Shop with <small>Unusual</small> for the most Unusual experience !
+          </span>
 
-          <span style={{ fontSize: "0.9rem" }}>On your 1st Order</span>
+          <span style={{ fontSize: "20px" }} className="offer">
+            {" "}
+            FLAT 500 OFF On your 1st Order
+          </span>
+
+          <button onClick={() => navigate("/women/kurti")}>Shop Now</button>
         </div>
       </div>
 

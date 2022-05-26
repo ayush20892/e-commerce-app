@@ -14,8 +14,9 @@ import {
 export function CartCardDesktop() {
   const { authState, authDispatch, setNetworkLoader } = useAuth();
   const navigate = useNavigate();
-
   const [bagValue, setBagValue] = useState(0);
+  const orderTotalValue = bagValue - Math.round((bagValue * 10) / 100);
+
   useEffect(() => {
     setBagValue(
       authState.cart.reduce(
@@ -146,11 +147,7 @@ export function CartCardDesktop() {
           <div className="payment-box-inner">
             <p>Total MRP (Incl. of taxes)</p>
             <p>
-              <span style={{ fontWeight: "bold" }}>₹</span>{" "}
-              {authState.cart.reduce(
-                (acc, item) => acc + item.product.price * item.quantity,
-                400
-              )}
+              <span style={{ fontWeight: "bold" }}>₹</span> {orderTotalValue}
             </p>
           </div>
           <div className="payment-box-inner">
@@ -160,13 +157,16 @@ export function CartCardDesktop() {
           <div className="payment-box-inner">
             <p>Bag Discount</p>
             <p>
-              - <span style={{ fontWeight: "bold" }}>₹</span> 400
+              (10% off) -{" "}
+              <span style={{ fontWeight: "bold" }}>
+                ₹ {Math.round((bagValue * 10) / 100)}
+              </span>
             </p>
           </div>
           <div className="payment-box-inner" style={{ fontWeight: "590" }}>
             <p>Subtotal</p>
             <p>
-              <span style={{ fontWeight: "bold" }}>₹</span> {bagValue}
+              <span style={{ fontWeight: "bold" }}>₹</span> {orderTotalValue}
             </p>
           </div>
 
@@ -177,13 +177,15 @@ export function CartCardDesktop() {
               color: "rgb(29, 136, 2)",
             }}
           >
-            <p>You are saving ₹ 400 on this order</p>
+            <p>
+              You are saving ₹ {Math.round((bagValue * 10) / 100)} on this order
+            </p>
           </div>
         </div>
 
         <div className="checkout-btn">
-          <h4>Rs {bagValue}</h4>
-          <button>CHECKOUT</button>
+          <h4>Rs {orderTotalValue}</h4>
+          <button onClick={() => navigate("/checkout")}>CHECKOUT</button>
         </div>
       </div>
     </div>

@@ -180,9 +180,9 @@
 
   .checkout-box > .checkout-btn > h4 {
     margin: 0;
-    margin-left: 0.5rem;
-    font-size: 0.7rem;
-    font-weight: 600;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 550;
   }
 
   .checkout-box > .checkout-btn > button {
@@ -190,10 +190,13 @@
     margin: 0rem 0.2rem;
     width: 70%;
     font-weight: 700;
-    background-color: #4169e1;
-    border: 0.3px solid #4169e1;
+    /* background-color: #4169e1;
+    border: 0.3px solid #4169e1; */
     border-radius: 0.5rem;
     color: white;
+    background-color: lightsalmon;
+    color: beige;
+    border: none;
     cursor: pointer;
   }
 }

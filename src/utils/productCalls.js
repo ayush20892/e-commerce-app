@@ -25,15 +25,12 @@ export async function addToWishlistHandler(
     navigate("/user/login", { replace: "true" });
     return;
   }
-  setNetworkLoader(true);
+  authDispatch({
+    type: "ADD_TO_WISHLIST",
+    payload: getProduct(authState.productList, productId, "wishlist"),
+  });
   const data = await addToWishlist(productId);
-  setNetworkLoader(false);
-  if (data.success)
-    authDispatch({
-      type: "ADD_TO_WISHLIST",
-      payload: getProduct(authState.productList, productId, "wishlist"),
-    });
-  else {
+  if (!data.success) {
     authDispatch({ type: "END_SESSION" });
     navigate("/user/login", { replace: "true" });
   }
@@ -45,12 +42,9 @@ export async function deleteFromWishlistHandler(
   navigate,
   setNetworkLoader
 ) {
-  setNetworkLoader(true);
+  authDispatch({ type: "REMOVE_FROM_WISHLIST", payload: productId });
   const data = await deleteFromWishlist(productId);
-  setNetworkLoader(false);
-  if (data.success)
-    authDispatch({ type: "REMOVE_FROM_WISHLIST", payload: productId });
-  else {
+  if (!data.success) {
     authDispatch({ type: "END_SESSION" });
     navigate("/user/login", { replace: "true" });
   }
@@ -67,15 +61,12 @@ export async function addToCartHandler(
     navigate("/user/login", { replace: "true" });
     return;
   }
-  setNetworkLoader(true);
+  authDispatch({
+    type: "ADD_TO_CART",
+    payload: getProduct(authState.productList, productId, "cart"),
+  });
   const data = await addToCart(productId);
-  setNetworkLoader(false);
-  if (data.success)
-    authDispatch({
-      type: "ADD_TO_CART",
-      payload: getProduct(authState.productList, productId, "cart"),
-    });
-  else {
+  if (!data.success) {
     authDispatch({ type: "END_SESSION" });
     navigate("/user/login", { replace: "true" });
   }
@@ -87,12 +78,9 @@ export async function deleteFromCartHandler(
   navigate,
   setNetworkLoader
 ) {
-  setNetworkLoader(true);
+  authDispatch({ type: "REMOVE_FROM_CART", payload: productId });
   const data = await deleteFromCart(productId);
-  setNetworkLoader(false);
-  if (data.success)
-    authDispatch({ type: "REMOVE_FROM_CART", payload: productId });
-  else {
+  if (!data.success) {
     authDispatch({ type: "END_SESSION" });
     navigate("/user/login", { replace: "true" });
   }
@@ -105,11 +93,9 @@ export async function increaseCartProductQuantity(
   navigate,
   setNetworkLoader
 ) {
-  setNetworkLoader(true);
+  authDispatch({ type: "INC_QTY", payload: productId });
   const data = await updateCartProductQuantity(productId, quantity);
-  setNetworkLoader(false);
-  if (data.success) authDispatch({ type: "INC_QTY", payload: productId });
-  else {
+  if (!data.success) {
     authDispatch({ type: "END_SESSION" });
     navigate("/user/login", { replace: "true" });
   }
@@ -122,11 +108,9 @@ export async function decreaseCartProductQuantity(
   navigate,
   setNetworkLoader
 ) {
-  setNetworkLoader(true);
+  authDispatch({ type: "DEC_QTY", payload: productId });
   const data = await updateCartProductQuantity(productId, quantity);
-  setNetworkLoader(false);
-  if (data.success) authDispatch({ type: "DEC_QTY", payload: productId });
-  else {
+  if (!data.success) {
     authDispatch({ type: "END_SESSION" });
     navigate("/user/login", { replace: "true" });
   }

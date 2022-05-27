@@ -1,4 +1,5 @@
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { PrivateRoute } from "./utils/PrivateRoute";
@@ -17,6 +18,7 @@ import { getAllProducts, userDashboard } from "./utils/networkCalls";
 import { ProductProvider } from "./context/productContext";
 import Checkout from "./pages/checkout";
 import AddressModal from "./components/addressModal/addressModal";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -108,6 +110,17 @@ function App() {
         <Route path="/user/:action" element={<UserPage />} />
         <Route path="/user/update/:updateType" element={<UpdateUserPage />} />
       </Routes>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }

@@ -74,8 +74,10 @@
   font-weight: 500;
 }
 
-.update-box > .update-form > h5 > span {
+.update-box > .update-form > h5 > button {
   color: var(--primary-color);
+  background-color: white;
+  border: none;
   font-weight: 550;
   font-size: 1rem;
   margin-top: 0.5rem;
@@ -146,7 +148,7 @@
 
   .update-box > .update-form > h5 {
     margin: 20px 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 

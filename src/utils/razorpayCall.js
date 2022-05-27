@@ -1,5 +1,6 @@
 import { createOrder, emptyCart } from "./networkCalls";
 import icon64 from "../icon/Utility-UI-64.png";
+import { toast } from "react-toastify";
 
 const { REACT_APP_RAZORPAY_API_KEY, REACT_APP_SECRET_KEY } = process.env;
 
@@ -16,7 +17,6 @@ export const proceedToPay = async (
   if (response) {
     const options = {
       key: REACT_APP_RAZORPAY_API_KEY,
-      // key_id: REACT_APP_RAZORPAY_API_KEY,
       key_secret: REACT_APP_SECRET_KEY,
       amount: orderTotalValue * 100,
       currency: "INR",
@@ -45,16 +45,16 @@ export const proceedToPay = async (
         authDispatch({ type: "EMPTY_CART" });
         authDispatch({ type: "USER_PROFILE_TAB", payload: "orders" });
         navigate("/user");
-        // toast.success("Order Placed Successfully");
+        toast.success("Order Placed Successfully");
       },
     };
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
     rzp1.on("payment.failed", function (response) {
-      // toast.error("Something went wrong", response.error.code);
+      toast.error("Something went wrong", response.error.code);
     });
   } else {
-    // toast.error("Something went wrong");
+    toast.error("Something went wrong");
   }
 };
 

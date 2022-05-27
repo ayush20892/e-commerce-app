@@ -3,12 +3,22 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import { FaTape } from "react-icons/fa";
 import { VscJersey } from "react-icons/vsc";
 import { GrEmoji } from "react-icons/gr";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export function ProductPageCard({ product }) {
+  const { categoryName, productType } = useParams();
+
+  function copyLink() {
+    navigator.clipboard.writeText(
+      `https://unusual-ecom.netlify.app/${categoryName}/${productType}/${product._id}`
+    );
+    toast.success("Link Copied !");
+  }
   return (
     <div className="product-page">
       <div>
-        <span>
+        <span onClick={copyLink}>
           <AiOutlineShareAlt />
         </span>
         <img src={product.image} alt=".." />

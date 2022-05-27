@@ -13,11 +13,19 @@ import {
   addToWishlistHandler,
   deleteFromWishlistHandler,
 } from "../../utils/productCalls";
+import { toast } from "react-toastify";
 
 export function ProductPageCardDesktop({ product }) {
   const { categoryName, productType } = useParams();
   const { authState, authDispatch, setNetworkLoader } = useAuth();
   const navigate = useNavigate();
+
+  function copyLink() {
+    navigator.clipboard.writeText(
+      `https://unusual-ecom.netlify.app/${categoryName}/${productType}/${product._id}`
+    );
+    toast.success("Link Copied !");
+  }
 
   return (
     <>
@@ -35,7 +43,7 @@ export function ProductPageCardDesktop({ product }) {
       </div>
       <div className="product-page-desktop">
         <div>
-          <span>
+          <span onClick={copyLink}>
             <AiOutlineShareAlt />
           </span>
           <img src={product.image} alt=".." />

@@ -44,10 +44,8 @@ export function UpdateUserBox({ type }) {
           {error !== "" && <h4>{error}</h4>}
           <button onClick={userUpdateHandler}>Update</button>
           <h5>
-            Go to user Dashboard --&gt;{" "}
-            <Link to="/user" style={{ textDecoration: "none" }}>
-              DASHBOARD
-            </Link>
+            Go to user
+            <button onClick={() => navigate("/user")}>DASHBOARD</button>
           </h5>
         </div>
       </div>

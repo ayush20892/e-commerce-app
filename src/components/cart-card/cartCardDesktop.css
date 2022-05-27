@@ -11,7 +11,7 @@
   .cart-box-desktop > .card-vertical {
     display: flex;
     flex-flow: column nowrap;
-    width: 65%;
+    width: 60%;
     margin: 0rem 0rem;
   }
 
@@ -32,7 +32,7 @@
     border-radius: 0.1rem;
     margin: 0.5% 1%;
     margin-left: 5%;
-    width: 85%;
+    width: 75%;
     /* padding-bottom: 3%; */
   }
 
@@ -123,8 +123,13 @@
     border: 0.5px solid lightgrey;
     margin-top: 2.5rem;
     height: 14.8rem;
+    height: max-content;
     width: 27%;
     font-size: 0.8rem;
+  }
+
+  .checkout-box p {
+    font-size: 14px;
   }
 
   .checkout-box-condition {
@@ -393,10 +398,10 @@
     margin: 0rem 0.2rem;
     width: 70%;
     font-weight: 700;
-    background-color: #4169e1;
-    border: 0.3px solid #4169e1;
     border-radius: 0.5rem;
-    color: white;
+    background-color: lightsalmon;
+    color: beige;
+    border: none;
     cursor: pointer;
   }
 }

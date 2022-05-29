@@ -71,6 +71,7 @@ function AddressModal() {
       type: "EDIT_ADDRESS",
       payload: { addressId: authState.addressToEdit, address: addressObject },
     });
+    authDispatch({ type: "ADDRESS_TO_EDIT", payload: "" });
     authDispatch({ type: "TOGGLE_ADDRESS_MODAL", payload: false });
     await editAddress({
       addressId: authState.addressToEdit,

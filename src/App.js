@@ -31,7 +31,7 @@ function App() {
     if (data.success)
       authDispatch({ type: "LOAD_PRODUCTS", payload: data.productResult });
 
-    if (session?.userId && session?.userId !== null) {
+    if (session?.userId && session.userId !== null) {
       const userData = await userDashboard();
 
       if (!userData.success) {

@@ -31,15 +31,15 @@ function App() {
     if (data.success)
       authDispatch({ type: "LOAD_PRODUCTS", payload: data.productResult });
 
-    if (session?.userId && session?.userId !== null) {
+    if (session?.userId) {
       const userData = await userDashboard();
 
       if (!userData.success) {
         authDispatch({ type: "END_SESSION" });
         navigate("/user/login", { replace: "true" });
+      } else {
+        authDispatch({ type: "START_SESSION", payload: userData.user });
       }
-
-      authDispatch({ type: "START_SESSION", payload: userData.user });
     } else {
       authDispatch({ type: "END_SESSION" });
       navigate("/user/login", { replace: "true" });
@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     loadInitialData();
-  }, [authState.userId]);
+  }, []);
 
   if (isLoading) {
     return (

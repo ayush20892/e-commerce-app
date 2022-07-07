@@ -1,0 +1,88 @@
+.card-vertical{
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 5rem;
+  margin-top: 3.5rem;
+}
+
+.card-ver-box{
+  border: 0.1px solid gray;
+  margin: 1% 1%;
+  /* padding-bottom: 3%; */
+}
+
+.card-vertical > .card-ver-box > .card-card-ver{
+  display: flex;
+  width: 100%;
+}
+
+.card-vertical > .card-ver-box > 
+.card-card-ver > img{
+  max-width:40%;
+  height: 65%;
+}
+
+.card-vertical > .card-ver-box >
+.card-card-ver > .card-detail{
+  margin-left: 0.5rem;
+}
+
+.card-vertical > .card-ver-box >
+.card-card-ver > .card-detail > h4{
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.card-vertical > .card-ver-box >
+.card-card-ver > .card-detail > h5{
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.card-card-ver > .card-detail > .qty{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-card-ver > .card-detail > .qty > button{
+  background-color: white;
+  border: none;
+}
+
+.card-card-ver > .card-detail > .qty > button:focus{
+  border: none;
+  outline: none;
+}
+
+.card-card-ver > .card-detail > .qty > h5{
+  margin: 0rem 0rem;
+}
+
+.card-ver-box > hr{
+  margin-top: 0.3rem;
+  margin-bottom: 0rem;
+}
+
+
+.card-ver-box > .card-ver-btn {
+  /* padding: 1rem 0rem; */
+}
+
+.card-ver-box > .card-ver-btn > .remove-btn{
+  width: 30%;
+  padding: 4% 0%;
+  background-color: white;
+  border: none;
+  border-right: 0.3px solid gray;
+  cursor: pointer;
+}
+
+.card-ver-box > .card-ver-btn > .move-to-wish-btn{
+  width: 70%;
+  padding: 4% 0%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+

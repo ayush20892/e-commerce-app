@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://unusual-ecom.netlify.app/" rel="noopener" target="_blank"><img src="/src/icon/Utility-UI-128.png" width="120" height="120" align="center"/></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
 
-## Available Scripts
+<h1 align="center">
+           Unusual E-Commerce App
+</h1>
 
-In the project directory, you can run:
+<div align="center">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h3 align="center">
+  Live Project : https://unusual-ecom.netlify.app/
+</h3>
 
-### `npm test`
+<h3 align="center">
+  Backend Repo : https://github.com/ayush20892/api-ecom-unusual
+ </h3>
+ 
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Overview:
+<p>✨ Unusual E-Com is a e-commerce app of clothing line for young folks ✨</p>
 
-### `npm run build`
+## Preview (Responsive) :
+![](/src/icon/unusual-ecom.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack :  <img src="https://img.shields.io/badge/react%20-%23121011.svg?&style=for-the-badge&logo=react&logoColor=white"/> <img src="https://img.shields.io/badge/express%20-%23121011.svg?&style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB%20-%23121011.svg?&style=for-the-badge&logo=MongoDB&logoColor=white"/> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend:** HTML,CSS,React 
+- **Backend:** Node, Express, Mongoose ODM
+- **Database:** MongoDB
+- **Authentication:** JWT, bcryptjs, cookies
+- **Version Control:** Git and GitHub
+- **Hosting:** Netlify
+- **Code Editor and tools**: VS Code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ <br />
+ 
+## Features: 
+- User Authentication with Forgot Password
+- Add Products to Cart & Wishlist
+- Sort & Filter of Product List
 
-### `npm run eject`
+## Future Improvements:
+- A checkout Page
+- Third party Authentication
+- Payment Gateway
+- Address Management & Tracking
+- Keyboard Accessibility
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Intallation Steps
+- Install Dependencies
+```
+$ npm install
+```
+- Start LocalHost Server
+```
+$ npm run start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Note
+- Add .env file with suitable variables.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Connect
+- **Twiiter** [ayush20892](https://twitter.com/ayush20892)
+- **LinkedIn** [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-0b82b6169/)
+- **Website** [ayush-sharma20.netlify.app/](https://ayush-sharma20.netlify.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+  <br />
+  <br />

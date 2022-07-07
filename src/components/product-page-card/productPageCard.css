@@ -1,0 +1,92 @@
+.product-page{
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.product-page > div{
+  position: relative;
+}
+
+.product-page > div > img{
+  width: 100%;
+}
+
+.product-page > div > span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 20%;
+  background-color: white;
+  padding: 0.05rem 0.2rem;
+  padding-top: 0.35rem;
+}
+
+.product-page > .product-detail{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.product-page > .product-detail > h4{
+  margin: 0rem 0rem;
+}
+
+.product-page > .product-detail > h5{
+  padding-top: 0.8rem;
+  margin: 0rem 0rem;
+}
+
+.product-page > hr{
+  margin: 1rem 1rem;
+}
+
+.product-page > .size-chart{
+  display: flex;
+  margin: 0rem 0.5rem;
+  justify-content: space-evenly
+}
+
+.product-page > .size-chart > div{
+  border: 0.3px solid gray;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+}
+
+.product-page > .divide-hr{
+  padding: 0.06rem 0rem;
+  margin: 1rem 0rem;
+  background-color: gray;
+}
+
+.product-page > .product-extra-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.product-extra-detail > .product-type{
+  margin: 1rem 0.8rem;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.product-extra-detail > .product-type > div > h4{
+  position: relative;
+  left: 1rem;
+  top: 0.5rem;
+  font-size: 1rem;
+  margin: 0rem 0rem;
+}
+
+.product-extra-detail > .product-type > div > h5{
+  position: relative;
+  left: 1rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+  color: gray;
+  margin: 0rem 0rem;
+}

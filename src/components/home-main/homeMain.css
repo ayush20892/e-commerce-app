@@ -1,0 +1,213 @@
+main {
+  margin-top: 4rem;
+  margin-left: 0rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+main > .categories {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+main > .categories > .category {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+main > .categories > .category > h5 {
+  text-align: center;
+  margin: 0rem 0rem;
+  margin-top: 0.5rem;
+}
+
+main > .categories > .category > img {
+  width: 100%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+main > .hoarding {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin-top: 10px;
+}
+
+main > .hoarding > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  cursor: pointer;
+}
+
+main > .hoarding > .hoardingText {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(83, 77, 69, 0.75);
+  position: absolute;
+  top: 0rem;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.hoarding > .hoardingText > span {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 10px;
+  color: white;
+  /* background-color: rgba(150, 150, 150, 0.75); */
+}
+
+.hoarding > .hoardingText > span > small {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.hoarding > .hoardingText > .offer {
+  display: none;
+}
+
+.hoarding > .hoardingText > button {
+  font-size: 18px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  background-color: #ffff00;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.hoarding > .hoardingText > button:hover {
+  background-color: rgba(241, 162, 43, 0.75);
+}
+
+main > .trending {
+  margin: 3rem 0.9rem;
+}
+
+main > .trending > h2 {
+  text-align: center;
+  margin: 0rem 0rem;
+}
+
+main > .trending > .trendingProducts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+main > .trending > .trendingProducts > .trendingCard {
+  width: 30%;
+  margin: 0.5rem 0rem;
+  cursor: pointer;
+}
+
+.trending > .trendingProducts > .trendingCard > img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.trending > .trendingProducts > .trendingCard > .trendingPrice {
+  text-align: center;
+}
+
+.trending > .trendingProducts > .trendingCard > .trendingPrice > strike {
+  margin-left: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+main > .trending > h4 {
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+main > .trending > h4 > a {
+  color: var(--dark-grey);
+  font-size: 15px;
+}
+
+@media screen and (min-width: 500px) {
+  main {
+    margin-bottom: 0rem;
+    margin-top: 4rem;
+  }
+
+  main > .categories {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+  }
+
+  main > .categories > .category {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main > .categories > .category > h5 {
+    text-align: center;
+    margin: 0rem 0rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  main > .hoarding {
+    /* background-color: rgba(48, 48, 48, 0.75); */
+    height: 38vh;
+  }
+
+  main > .hoarding > img {
+  }
+
+  main > .hoarding > .hoardingText > span {
+    font-size: 28px;
+  }
+
+  main > .trending {
+    margin: 3rem 0.9rem;
+  }
+
+  main > .trending > h2 {
+    text-align: center;
+    margin: 0rem 0rem;
+  }
+
+  main > .trending > .trendingProducts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    width: 100%;
+    margin: 1rem 2%;
+  }
+
+  main > .trending > .trendingProducts > .trendingCard {
+    width: 16%;
+    margin: 0.5rem 0rem;
+    cursor: pointer;
+  }
+
+  .trending > .trendingProducts > .trendingCard > img {
+    width: 100%;
+    border-radius: 5%;
+  }
+}
